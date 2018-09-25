@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Зиновьев](https://up.htmlacademy.ru/adaptive/15/user/198751).
-* Наставник: Андрей Чепулис.
+* Наставник: [Андрей Чепулис](https://htmlacademy.ru/profile/id240237).
 
 ---
 
