@@ -1,12 +1,133 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
 
-  </body>
+<body>
+  <!-- TOP-MENU -->
+  <div class="top-menu">
+    <img src="http://placehold.it/150x100" alt="" class="top-menu__logo-img">
+    <button class="top-menu__button button-menu"></button>
+  </div>
+  <!-- TOP-MENU -->
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="header__title title">Милые штуки ручной работы для дома</h1>
+    <div class="header-item">
+      <div class="header-item__text">Предметы интерьера</div>
+      <div class="header-item__ico item__ico item__ico-lamp"></div>
+    </div>
+    <div class="header-item">
+      <div class="header-item__text">Детские игрушки</div>
+      <div class="header-item__ico item__ico item__ico-games"></div>
+    </div>
+  </header>
+  <!-- HEADER -->
+  <!-- CATALOG -->
+  <div class="catalog">
+    <div class="featured">
+      <div class="title">
+        Вязаные корзинки
+        <div class="title_color title_color__color-green">Товар недели</div>
+      </div>
+      <p class="info">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+      <div class="description">
+        <div class="description__argument">Цвет:</div>
+        <div class="description__data">&laquo;Тиффани&raquo;/серый</div>
+      </div>
+      <div class="description">
+        <div class="description__argument">Диаметр:</div>
+        <div class="description__data">25 см</div>
+      </div>
+      <div class="description">
+        <div class="description__argument">Высота</div>
+        <div class="description__data">15 см</div>
+      </div>
+      <img src="http://placehold.it/150x100" alt="" class="featured__img">
+      <div class="price">Цена: 990 руб.</div>
+      <button class="button">Заказать</button>
+    </div>
+  </div>
+  <!-- CATALOG -->
+  <!-- ABOUT -->
+  <div class="about">
+    <div class="about-item">
+      <img src="http://placehold.it/150x100" alt="" class="about-item_ico">
+      <div class="about-item_text">Экологически чистые материалы</div>
+    </div>
+    <div class="about-item">
+      <img src="http://placehold.it/150x100" alt="" class="about-item_ico">
+      <div class="about-item_text">Скандинавский стиль по российской цене</div>
+    </div>
+    <div class="about-item">
+      <img src="http://placehold.it/150x100" alt="" class="about-item_ico">
+      <div class="about-item_text">Увеличивает лайки на фотографиях</div>
+    </div>
+    <div class="about-item">
+      <img src="http://placehold.it/150x100" alt="" class="about-item_ico">
+      <div class="about-item_text">Связано вручную с любовью и умилением</div>
+    </div>
+    <div class="about-item">
+      <img src="http://placehold.it/150x100" alt="" class="about-item_ico">
+      <div class="about-item_text">Поддержка отечественного производителя</div>
+    </div>
+    <div class="about-item">
+      <img src="http://placehold.it/150x100" alt="" class="about-item_ico">
+      <div class="about-item_text">поставляется в подарочной упаковке</div>
+    </div>
+  </div>
+  <!-- ABOUT -->
+  <!-- COMMENTS -->
+  <div class="comments">
+    <div class="title">Отзывы</div>
+    <div class="comments-block slider">
+      <div class="comments__item slider__item">
+        <p class="info">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также
+          набирают больше лайков!
+          <span class="info__name">Анастасия Красильникова</span>
+          <span class="info__inst">@misssssiskras</span>
+        </p>
+      </div>
+      <div class="slider-nav">
+        <div class="slider-nav__direction direction_up"></div>
+        <div class="slider-nav__direction direction_down"></div>
+      </div>
+    </div>
+    <button class="button">Написать</button>
+  </div>
+  <!-- COMMENTS -->
+  <!-- CONTACT -->
+  <div class="contact">
+    <div class="title">Контакты</div>
+    <address class="description">
+      <div class="description__argument">e-mail:</div>
+      <div class="description__data"><a href="">info@mimimishkashop.ru</a></div>
+    </address>
+    <address class="description">
+      <div class="description__argument">адрес:</div>
+      <div class="description__data"><span class="description-span">г. Санкт-Петербург,</span></div>
+      <div class="description__data"><span class="description-span">ул. Большая Конюшенная</span></div>
+      <div class="description__data"><span class="description-span">д.19/8, офис 101</span></div>
+    </address>
+    <div class="yandex-map"></div>
+    <button class="button">Напишите нам</button>
+  </div>
+  <!-- CONTACT -->
+  <footer class="footer">
+    <div class="footer-social">
+      <div class="social__ico social__ico-inst"></div>
+      <div class="social__ico social__ico-facebook"></div>
+      <div class="social__ico social__ico-tveet"></div>
+    </div>
+    <a class="footer-developer">
+      Разработано
+      <img src="http://placehold.it/150x100" alt="" class="footer-developer__img">
+    </a>
+  </footer>
+</body>
+
 </html>
