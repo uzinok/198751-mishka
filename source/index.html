@@ -7,126 +7,180 @@
 </head>
 
 <body>
-  <!-- TOP-MENU -->
-  <div class="top-menu">
-    <img src="http://placehold.it/150x100" alt="" class="top-menu__logo-img">
-    <button class="top-menu__button button-menu"></button>
-  </div>
-  <!-- TOP-MENU -->
 
   <!-- HEADER -->
   <header class="header">
-    <h1 class="header__title title">Милые штуки ручной работы для дома</h1>
-    <div class="header-item">
-      <div class="header-item__text">Предметы интерьера</div>
-      <div class="header-item__ico item__ico item__ico-lamp"></div>
+
+    <div class="container">
+
+      <div class="header__top-menu top-menu">
+        <img src="http://placehold.it/150x100" alt="" class="top-menu__logo-img">
+        <button class="top-menu__button button-menu"></button>
+      </div>
+
+      <h1 class="header__title">Милые штуки ручной работы для дома</h1>
+
     </div>
-    <div class="header-item">
-      <div class="header-item__text">Детские игрушки</div>
-      <div class="header-item__ico item__ico item__ico-games"></div>
+
+    <div class="header__promo promo">
+
+      <div class="promo__action">
+
+        <a href="#" class="promo__action-link">
+          <span class="promo__action-text">Предметы интерьера</span>
+          <div class="promo__action-img">
+            <!-- SVG -->
+          </div>
+        </a>
+
+        <a href="#" class="promo__action-link">
+          <span class="promo__action-text">Детские игрушки</span>
+          <div class="promo__action-img">
+            <!-- SVG -->
+          </div>
+        </a>
+
+      </div>
+
     </div>
   </header>
   <!-- HEADER -->
-  <!-- CATALOG -->
-  <div class="catalog">
-    <div class="featured">
-      <div class="title">
-        Вязаные корзинки
-        <div class="title_color title_color__color-green">Товар недели</div>
-      </div>
-      <p class="info">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-      <div class="description">
-        <div class="description__argument">Цвет:</div>
-        <div class="description__data">&laquo;Тиффани&raquo;/серый</div>
-      </div>
-      <div class="description">
-        <div class="description__argument">Диаметр:</div>
-        <div class="description__data">25 см</div>
-      </div>
-      <div class="description">
-        <div class="description__argument">Высота</div>
-        <div class="description__data">15 см</div>
-      </div>
-      <img src="http://placehold.it/150x100" alt="" class="featured__img">
-      <div class="price">Цена: 990 руб.</div>
-      <button class="button">Заказать</button>
-    </div>
-  </div>
-  <!-- CATALOG -->
-  <!-- ABOUT -->
-  <div class="about">
-    <div class="about-item">
-      <img src="http://placehold.it/150x100" alt="" class="about-item_ico">
-      <div class="about-item_text">Экологически чистые материалы</div>
-    </div>
-    <div class="about-item">
-      <img src="http://placehold.it/150x100" alt="" class="about-item_ico">
-      <div class="about-item_text">Скандинавский стиль по российской цене</div>
-    </div>
-    <div class="about-item">
-      <img src="http://placehold.it/150x100" alt="" class="about-item_ico">
-      <div class="about-item_text">Увеличивает лайки на фотографиях</div>
-    </div>
-    <div class="about-item">
-      <img src="http://placehold.it/150x100" alt="" class="about-item_ico">
-      <div class="about-item_text">Связано вручную с любовью и умилением</div>
-    </div>
-    <div class="about-item">
-      <img src="http://placehold.it/150x100" alt="" class="about-item_ico">
-      <div class="about-item_text">Поддержка отечественного производителя</div>
-    </div>
-    <div class="about-item">
-      <img src="http://placehold.it/150x100" alt="" class="about-item_ico">
-      <div class="about-item_text">поставляется в подарочной упаковке</div>
-    </div>
-  </div>
-  <!-- ABOUT -->
-  <!-- COMMENTS -->
-  <div class="comments">
-    <div class="title">Отзывы</div>
-    <div class="comments-block slider">
-      <div class="comments__item slider__item">
-        <p class="info">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также
-          набирают больше лайков!
-          <span class="info__name">Анастасия Красильникова</span>
-          <span class="info__inst">@misssssiskras</span>
-        </p>
-      </div>
-      <div class="slider-nav">
-        <div class="slider-nav__direction direction_up"></div>
-        <div class="slider-nav__direction direction_down"></div>
+  <main>
+
+
+    <!-- CATALOG -->
+    <div class="catalog">
+      <div class="container">
+
+        <div class="featured">
+          <h2 class="title">
+            Вязаные корзинки
+            <span class="title__color title__color-green">Товар недели</span>
+          </h2>
+          <p class="info">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <div class="description">
+            <span class="description__argument">Цвет:</span>
+            <span class="description__data">&laquo;Тиффани&raquo;/серый</span>
+          </div>
+          <div class="description">
+            <span class="description__argument">Диаметр:</span>
+            <span class="description__data">25 см</span>
+          </div>
+          <div class="description">
+            <span class="description__argument">Высота</span>
+            <span class="description__data">15 см</span>
+          </div>
+          <img src="http://placehold.it/150x100" alt="" class="featured__img">
+          <span class="price">Цена: 990 руб.</span>
+          <button class="button">Заказать</button>
+        </div>
+
       </div>
     </div>
-    <button class="button">Написать</button>
-  </div>
-  <!-- COMMENTS -->
-  <!-- CONTACT -->
-  <div class="contact">
-    <div class="title">Контакты</div>
-    <address class="description">
-      <div class="description__argument">e-mail:</div>
-      <div class="description__data"><a href="">info@mimimishkashop.ru</a></div>
-    </address>
-    <address class="description">
-      <div class="description__argument">адрес:</div>
-      <div class="description__data"><span class="description-span">г. Санкт-Петербург,</span></div>
-      <div class="description__data"><span class="description-span">ул. Большая Конюшенная</span></div>
-      <div class="description__data"><span class="description-span">д.19/8, офис 101</span></div>
-    </address>
-    <div class="yandex-map"></div>
-    <button class="button">Напишите нам</button>
-  </div>
-  <!-- CONTACT -->
+    <!-- CATALOG -->
+    <hr class="wave" />
+    <!-- ABOUT -->
+    <div class="about">
+      <div class="container">
+        <h2 class="title">Коротко о нас:</h2>
+        <div class="about__item">
+          <div class="about__item_img">
+            <!-- svg -->
+          </div>
+          <p class="about__item_text">Экологически чистые материалы</p>
+        </div>
+        <div class="about__item">
+          <div class="about__item_img">
+            <!-- svg -->
+          </div>
+          <p class="about__item_text">Скандинавский стиль по российской цене</p>
+        </div>
+        <div class="about__item">
+          <div class="about__item_img">
+            <!-- svg -->
+          </div>
+          <p class="about__item_text">Увеличивает лайки на фотографиях</p>
+        </div>
+        <div class="about__item">
+          <div class="about__item_img">
+            <!-- svg -->
+          </div>
+          <p class="about__item_text">Связано вручную с любовью и умилением</p>
+        </div>
+        <div class="about__item">
+          <div class="about__item_img">
+            <!-- svg -->
+          </div>
+          <p class="about__item_text">Поддержка отечественного производителя</p>
+        </div>
+        <div class="about__item">
+          <div class="about__item_img">
+            <!-- svg -->
+          </div>
+          <p class="about__item_text">поставляется в подарочной упаковке</p>
+        </div>
+      </div>
+    </div>
+    <!-- ABOUT -->
+    <!-- COMMENTS -->
+    <div class="comments">
+      <div class="container">
+        <div class="title">Отзывы</div>
+        <div class="comments-block slider">
+          <div class="comments__item slider__item">
+            <p class="info">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а
+              также
+              набирают больше лайков!
+              <span class="info__name">Анастасия Красильникова</span>
+              <span class="info__inst">@misssssiskras</span>
+            </p>
+          </div>
+          <div class="slider-nav">
+            <div class="slider-nav__direction direction direction_up"></div>
+            <div class="slider-nav__direction direction direction_down"></div>
+          </div>
+        </div>
+        <button class="button">Написать</button>
+      </div>
+    </div>
+    <!-- COMMENTS -->
+    <hr class="wave" />
+    <!-- CONTACT -->
+    <div class="contact">
+      <div class="container">
+        <h2 class="contact__title">Контакты</h2>
+        <address class="description">
+          <div class="description__argument">e-mail:</div>
+          <div class="description__data"><a href="">info@mimimishkashop.ru</a></div>
+        </address>
+        <address class="description">
+          <span class="description__argument">адрес:</span>
+          <span class="description__data">г. Санкт-Петербург,<br />ул. Большая Конюшенная<br />д.19/8, офис 101</span>
+        </address>
+      </div>
+      <div class="yandex-map"></div>
+      <button class="button">Напишите нам</button>
+    </div>
+    <!-- CONTACT -->
+  </main>
   <footer class="footer">
-    <div class="footer-social">
-      <div class="social__ico social__ico-inst"></div>
-      <div class="social__ico social__ico-facebook"></div>
-      <div class="social__ico social__ico-tveet"></div>
+    <div class="container">
+      <div class="footer-social social">
+        <a href="#" class="social__link">
+          <!-- svg -->
+        </a>
+        <a href="#" class="social__link">
+          <!-- svg -->
+        </a>
+        <a href="#" class="social__link">
+          <!-- svg -->
+        </a>
+      </div>
+      <a class="footer-developer">
+        Разработано
+        <img src="http://placehold.it/150x100" alt="" class="footer-developer__img">
+      </a>
     </div>
-    <a class="footer-developer">
-      Разработано
-      <img src="http://placehold.it/150x100" alt="" class="footer-developer__img">
-    </a>
   </footer>
 </body>
 
