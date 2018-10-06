@@ -4,40 +4,43 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: catalog</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="page-header">
-    <div class="container">
-      <a href="#" class="page-header__logo-link">
-        <img src="http://placehold.it/150x100" alt="logo" class="page-header__logo-image">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle">
-          <span class="visually-hidden">управление меню</span>
-        </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="" class="main-nav__link">Каталог товаров</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="" class="main-nav__link">Вязание на заказ</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="" class="main-nav__link">
-              <!-- svg -->
-              поиск по сайту
-            </a>
-          </li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">
-              <!-- svg -->
-              корзина: пока пуста
-            </a></li>
-          <ul />
-      </nav>
-      <p class="page-header__title">Каталог товаров</p>
-    </div>
-
+    <div class="page-header__header">
+      <div class="container">
+        <a href="index.html" class="page-header__logo-link">
+          <img src="img/logo-mobile.svg" alt="логотип мишка" class="page-header__logo-image">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle">
+            <span class="visually-hidden">управление меню</span>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">
+                <!-- svg -->
+                поиск по сайту
+              </a>
+            </li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">
+                <!-- svg -->
+                корзина: пока пуста
+              </a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="page-header__title">
+        <p class="page-header__title-container">Вязание на заказ</p>
+      </div>
   </header>
 
   <div class="page-main">
@@ -46,60 +49,67 @@
       <div class="container">
         <ul class="catalog-block__list">
           <li class="catalog-block__item">
-            <img src="http://placehold.it/150x100" alt="" class="catalog-block__img">
-            <h2 class="catalog-block__name">Зайчик-попрыгайчик</h2>
-            <p class="catalog-block__description">Рост 30см, вес 200 г</p>
-            <p class="catalog-block__price">
-              1 200 руб.
-              <button class="catalog-block__button ">
-                <span class="visually-hidden">заказ товара</span>
-                <!-- svg -->
-              </button>
-            </p>
+            <img src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" class="catalog-block__img">
+            <div class="catalog-block__container-info">
+              <h2 class="catalog-block__name">Зайчик-попрыгайчик</h2>
+              <p class="catalog-block__description">Рост 30см, вес 200 г</p>
+              <p class="catalog-block__price">
+                1 200 руб.
+                <button class="catalog-block__button ">
+                  <span class="visually-hidden">заказ товара</span>
+                  <!-- svg -->
+                </button>
+              </p>
+            </div>
           </li>
 
           <li class="catalog-block__item">
-            <img src="http://placehold.it/150x100" alt="" class="catalog-block__img">
-            <h2 class="catalog-block__name">Корзинка для белья</h2>
-            <p class="catalog-block__description">Диаметр 15 см, высота 10 см</p>
-            <p class="catalog-block__price">
-              690 руб.
-              <button class="catalog-block__button ">
-                <span class="visually-hidden">заказ товара</span>
-                <!-- svg -->
-              </button>
-            </p>
+            <img src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" class="catalog-block__img">
+            <div class="catalog-block__container-info">
+              <h2 class="catalog-block__name">Корзинка для белья</h2>
+              <p class="catalog-block__description">Диаметр 15 см, высота 10 см</p>
+              <p class="catalog-block__price">
+                690 руб.
+                <button class="catalog-block__button ">
+                  <span class="visually-hidden">заказ товара</span>
+                  <!-- svg -->
+                </button>
+              </p>
+            </div>
           </li>
 
           <li class="catalog-block__item">
-            <img src="http://placehold.it/150x100" alt="" class="catalog-block__img">
-            <h2 class="catalog-block__name">Большая каорзинка для игрушек</h2>
-            <p class="catalog-block__description">Диаметр 30 см, высота 30 см</p>
-            <p class="catalog-block__price">
-              1 500 руб.
-              <button class="catalog-block__button ">
-                <span class="visually-hidden">заказ товара</span>
-                <!-- svg -->
-              </button>
-            </p>
+            <img src="img/photo-toys-mobile@1x.jpg" alt="Большая каорзинка для игрушек" class="catalog-block__img">
+            <div class="catalog-block__container-info">
+              <h2 class="catalog-block__name">Большая каорзинка для игрушек</h2>
+              <p class="catalog-block__description">Диаметр 30 см, высота 30 см</p>
+              <p class="catalog-block__price">
+                1 500 руб.
+                <button class="catalog-block__button ">
+                  <span class="visually-hidden">заказ товара</span>
+                  <!-- svg -->
+                </button>
+              </p>
+            </div>
           </li>
         </ul>
       </div>
     </section>
 
     <section class="block-video">
-      <div class="container">
-        <h2 class="block-video__title">
-          <!-- svg -->
-          Процесс производства
-        </h2>
-        <video poster="http://placehold.it/150x100" alt="" class="block-video__video"></video>
+      <h2 class="block-video__title">
+        <!-- svg -->
+        Процесс производства
+      </h2>
+      <video poster="img/video-mobile@1x.jpg" alt="Процесс производства" class="block-video__video"></video>
+      <div class="block-video__container-info">
         <p class="block-video__text">По просьбам наших фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <button class="button">Сделать заказ</button>
       </div>
     </section>
 
   </div>
+
 
   <footer class="footer">
     <div class="container">
@@ -117,33 +127,35 @@
           <span class="visually-hidden">социальная ссылка</span>
         </a>
       </div>
-      <a class="footer-developer">
+      <a href="form.html" class="footer-developer-link">
         Разработано
-        <img src="http://placehold.it/150x100" alt="" class="footer-developer__img">
+        <img src="img/logo-htmlacademy.svg" alt="логотип htmlacademy" class="footer-developer-link__img">
       </a>
     </div>
   </footer>
 
-  <!-- MODAL WINDOW -->
-  <div class="popup">
-    <div class="container">
-      <h2 class="popup__block-title block-title">Добавить в корзину</h2>
-      <form action="" class="popup__block-form-toggle">
-        <fieldset class="popup__fieldset">
-          <legend class="popup__sub-title">выберите размер:</legend>
 
-          <input type="checkbox" class="popup__checkbox" name="checkbox" checked>
-          <label class="popup__label-checkbox">s</label>
-          <input type="checkbox" class="popup__checkbox" name="checkbox">
-          <label class="popup__label-checkbox">l</label>
-          <input type="checkbox" class="popup__checkbox" name="checkbox">
-          <label class="popup__label-checkbox">m</label>
-        </fieldset>
-        <button class="popup__button button">Добавить</button>
-      </form>
+    <!-- MODAL WINDOW -->
+    <div class="popup">
+      <div class="container">
+        <h2 class="popup__block-title">Добавить в корзину</h2>
+        <form action="" class="popup__block-form-toggle">
+          <fieldset class="popup__fieldset">
+            <legend class="popup__sub-title">выберите размер:</legend>
+            <div class="popup__block-checkbox">
+              <input type="checkbox" class="popup__checkbox" name="checkbox" checked>
+              <label class="popup__label-checkbox popup__label-checkbox--checked">s</label>
+              <input type="checkbox" class="popup__checkbox" name="checkbox">
+              <label class="popup__label-checkbox">l</label>
+              <input type="checkbox" class="popup__checkbox" name="checkbox">
+              <label class="popup__label-checkbox">m</label>
+            </div>
+          </fieldset>
+          <button class="popup__button button">Добавить</button>
+        </form>
+      </div>
     </div>
-  </div>
-  <!-- MODAL WINDOW -->
+    <!-- MODAL WINDOW -->
 
 </body>
 

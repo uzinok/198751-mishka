@@ -3,41 +3,46 @@
 
 <head>
   <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
   <title>HTML Academy: form</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="page-header">
-    <div class="container">
-      <a href="#" class="page-header__logo-link">
-        <img src="http://placehold.it/150x100" alt="logo" class="page-header__logo-image">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle">
-          <span class="visually-hidden">управление меню</span>
-        </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="" class="main-nav__link">Каталог товаров</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="" class="main-nav__link">Вязание на заказ</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="" class="main-nav__link">
-              <!-- svg -->
-              поиск по сайту
-            </a>
-          </li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">
-              <!-- svg -->
-              корзина: пока пуста
-            </a></li>
-        </ul>
-      </nav>
-      <p class="page-header__title">Милые штуки ручной работы для дома</p>
+    <div class="page-header__header">
+      <div class="container">
+        <a href="index.html" class="page-header__logo-link">
+          <img src="img/logo-mobile.svg" alt="логотип мишка" class="page-header__logo-image">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle">
+            <span class="visually-hidden">управление меню</span>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">
+                <!-- svg -->
+                поиск по сайту
+              </a>
+            </li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">
+                <!-- svg -->
+                корзина: пока пуста
+              </a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-
+    <div class="page-header__title">
+      <p class="page-header__title-container">Вязание на заказ</p>
+    </div>
   </header>
 
   <div class="page-main">
@@ -117,9 +122,9 @@
           <span class="visually-hidden">социальная ссылка</span>
         </a>
       </div>
-      <a class="footer-developer">
+      <a href="form.html" class="footer-developer-link">
         Разработано
-        <img src="http://placehold.it/150x100" alt="" class="footer-developer__img">
+        <img src="img/logo-htmlacademy.svg" alt="логотип htmlacademy" class="footer-developer-link__img">
       </a>
     </div>
   </footer>
