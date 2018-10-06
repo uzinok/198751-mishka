@@ -1,5 +1,31 @@
 .main-nav__list {
-  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  position: relative;
+  border-bottom: 1px solid @border-color-light;
+
+  &:first-child {
+    border-top: 1px solid @border-color-light;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.main-nav__link {
+  display: inline-block;
+  width: 100%;
+  font-size: 17px;
+  line-height: 80px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
 }
 
 .main-nav__toggle {
@@ -10,6 +36,11 @@
   position: absolute;
   top: 10px;
   right: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/icon-menu-open.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 
   &:hover {
     cursor: pointer;
