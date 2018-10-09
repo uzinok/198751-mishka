@@ -35,7 +35,7 @@
   box-shadow: none;
   position: absolute;
   top: 10px;
-  right: 0;
+  right: 30px;
   width: 20px;
   height: 20px;
   background-image: url("../img/icon-menu-open.svg");
@@ -44,5 +44,45 @@
 
   &:hover {
     cursor: pointer;
+  }
+}
+// tablet
+@media (min-width: @min-width-tablet) {
+  .main-nav {
+    display: inline-block;
+    float: right;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: block;
+
+    &--bottom-tablet {
+      position: absolute;
+      left: 30px;
+      top: 100%;
+      z-index: 1;
+    }
+  }
+
+  .main-nav__item {
+    display: inline-block;
+    border: none;
+
+    &:first-child {
+      border: none;
+    }
+  }
+
+  .main-nav__link {
+    font-size: 17px;
+
+    &--bottom-tablet {
+      font-size: 15px;
+      line-height: 65px;
+    }
   }
 }

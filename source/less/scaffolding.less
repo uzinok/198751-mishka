@@ -17,8 +17,14 @@ body {
 
 .container {
   position: relative;
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 0 30px;
   box-sizing: border-box;
+}
+// tablet
+@media (min-width: @min-width-tablet) {
+  .container {
+    padding: 0 50px;
+  }
 }
