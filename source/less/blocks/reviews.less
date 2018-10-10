@@ -53,9 +53,55 @@
 
 .slider__toggle {
   background-color: #ffffff;
+  border: none;
   box-shadow: none;
   display: block;
-  width: 50%;
   height: 50px;
-  border: 1px solid @border-color-light;
+  width: 50%;
+}
+// for mobile
+@media (max-width: @max-width-mobile) {
+  .slider__toggle {
+    border: 1px solid @border-color-light;
+  }
+}
+// tablet
+@media (min-width: @min-width-tablet) {
+  .reviews {
+    padding: 0;
+  }
+
+  .reviews__container {
+    padding-top: 85px;
+    padding-bottom: 114px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1050px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  .reviews__list {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .reviews__text {
+    padding-bottom: 65px;
+  }
+
+  .reviews__button {
+    position: absolute;
+    top: 85px;
+    right: 50px;
+    width: 175px;
+  }
+
+  .reviews__toggles {
+    position: absolute;
+    bottom: 133px;
+    right: 50px;
+    width: 175px;
+  }
 }

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
   <title>HTML Academy: catalog</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,28 +20,32 @@
             <span class="visually-hidden">управление меню</span>
           </button>
           <ul class="main-nav__list">
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--tablet">
               <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
-            </li>
-            <li class="main-nav__item">
               <a href="form.html" class="main-nav__link">Вязание на заказ</a>
             </li>
             <li class="main-nav__item">
               <a href="#" class="main-nav__link">
-                <!-- svg -->
                 поиск по сайту
               </a>
-            </li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">
-                <!-- svg -->
+              <a href="#" class="main-nav__link">
                 корзина: пока пуста
-              </a></li>
+              </a>
+            </li>
+            <li class="main-nav__item main-nav__item--desktop">
+              <a href="#" class="main-nav__link">Новые поступления</a>
+              <a href="#" class="main-nav__link">Распродажа</a>
+            </li>
           </ul>
         </nav>
       </div>
-      <div class="page-header__title">
-        <p class="page-header__title-container">Вязание на заказ</p>
-      </div>
+    </div>
+    <div class="container">
+      <p class="page-header__delivery">Бесплатная доставка по России</p>
+    </div>
+    <div class="page-header__title">
+      <p class="page-header__title-container">Каталог товаров</p>
+    </div>
   </header>
 
   <div class="page-main">
@@ -97,14 +102,16 @@
     </section>
 
     <section class="block-video">
-      <h2 class="block-video__title">
-        <!-- svg -->
-        Процесс производства
-      </h2>
-      <video poster="img/video-mobile@1x.jpg" alt="Процесс производства" class="block-video__video"></video>
-      <div class="block-video__container-info">
-        <p class="block-video__text">По просьбам наших фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <button class="button">Сделать заказ</button>
+      <div class="container block-video__container">
+        <h2 class="block-video__title">
+          <!-- svg -->
+          Процесс производства
+        </h2>
+        <video poster="img/video-mobile@1x.jpg" alt="Процесс производства" class="block-video__video"></video>
+        <div class="block-video__container-info">
+          <p class="block-video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <button class="button">Сделать заказ</button>
+        </div>
       </div>
     </section>
 
@@ -113,6 +120,9 @@
 
   <footer class="footer">
     <div class="container">
+      <div class="footer__logo">
+        <img src="img/logo-tablet.svg" alt="">
+      </div>
       <div class="footer-social social">
         <a href="#" class="social__link">
           <!-- svg -->
@@ -127,7 +137,7 @@
           <span class="visually-hidden">социальная ссылка</span>
         </a>
       </div>
-      <a href="form.html" class="footer-developer-link">
+      <a href="#" class="footer-developer-link">
         Разработано
         <img src="img/logo-htmlacademy.svg" alt="логотип htmlacademy" class="footer-developer-link__img">
       </a>
@@ -135,27 +145,27 @@
   </footer>
 
 
-    <!-- MODAL WINDOW -->
-    <div class="popup">
-      <div class="container">
-        <h2 class="popup__block-title">Добавить в корзину</h2>
-        <form action="" class="popup__block-form-toggle">
-          <fieldset class="popup__fieldset">
-            <legend class="popup__sub-title">выберите размер:</legend>
-            <div class="popup__block-checkbox">
-              <input type="checkbox" class="popup__checkbox" name="checkbox" checked>
-              <label class="popup__label-checkbox popup__label-checkbox--checked">s</label>
-              <input type="checkbox" class="popup__checkbox" name="checkbox">
-              <label class="popup__label-checkbox">l</label>
-              <input type="checkbox" class="popup__checkbox" name="checkbox">
-              <label class="popup__label-checkbox">m</label>
-            </div>
-          </fieldset>
-          <button class="popup__button button">Добавить</button>
-        </form>
-      </div>
+  <!-- MODAL WINDOW -->
+  <div class="popup">
+    <div class="container">
+      <h2 class="popup__block-title">Добавить в корзину</h2>
+      <form action="" class="popup__block-form-toggle">
+        <fieldset class="popup__fieldset">
+          <legend class="popup__sub-title">выберите размер:</legend>
+          <div class="popup__block-checkbox">
+            <input type="checkbox" class="popup__checkbox" name="checkbox" checked>
+            <label class="popup__label-checkbox popup__label-checkbox--checked">s</label>
+            <input type="checkbox" class="popup__checkbox" name="checkbox">
+            <label class="popup__label-checkbox">l</label>
+            <input type="checkbox" class="popup__checkbox" name="checkbox">
+            <label class="popup__label-checkbox">m</label>
+          </div>
+        </fieldset>
+        <button class="popup__button button">Добавить</button>
+      </form>
     </div>
-    <!-- MODAL WINDOW -->
+  </div>
+  <!-- MODAL WINDOW -->
 
 </body>
 

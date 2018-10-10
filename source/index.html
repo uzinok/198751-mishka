@@ -20,28 +20,31 @@
             <span class="visually-hidden">управление меню</span>
           </button>
           <ul class="main-nav__list">
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--tablet">
               <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
-            </li>
-            <li class="main-nav__item">
               <a href="form.html" class="main-nav__link">Вязание на заказ</a>
             </li>
             <li class="main-nav__item">
               <a href="#" class="main-nav__link">
-                <!-- svg -->
                 поиск по сайту
               </a>
-            </li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">
-                <!-- svg -->
+              <a href="#" class="main-nav__link">
                 корзина: пока пуста
-              </a></li>
+              </a>
+            </li>
+            <li class="main-nav__item main-nav__item--desktop">
+              <a href="#" class="main-nav__link">Новые поступления</a>
+              <a href="#" class="main-nav__link">Распродажа</a>
+            </li>
           </ul>
         </nav>
       </div>
     </div>
     <div class="page-header__title page-header__title--promo">
-      <p class="page-header__title-container">
+      <div class="container">
+        <p class="page-header__delivery">Бесплатная доставка по России</p>
+      </div>
+      <p class="page-header__title-container page-header__title-container--promo">
         Милые&nbsp;штуки ручной работы&nbsp;для&nbsp;дома
       </p>
     </div>
@@ -72,7 +75,7 @@
   <div class="page-main">
 
     <section class="catalog">
-      <div class="container">
+      <div class="catalog__container-header container">
         <div class="catalog__block-header block-title">
           <h2 class="block-title__title">Вязаные корзинки</h2>
           <p class="block-title__sub-title">Товар недели</p>
@@ -95,8 +98,10 @@
           </li>
         </ul>
         <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки" class="catalog__img-prod">
-        <p class="catalog__price">Цена: 990 руб.</p>
-        <button class="button">Заказать</button>
+        <div class="catalog__container-footer">
+          <p class="catalog__price">Цена: 990 руб.</p>
+          <button class="button">Заказать</button>
+        </div>
       </div>
     </section>
 
@@ -135,7 +140,7 @@
     </section>
 
     <section class="reviews slider">
-      <div class="container">
+      <div class="reviews__container container">
         <h2 class="reviews__block-title block-title">
           Отзывы
         </h2>
@@ -193,6 +198,9 @@
 
   <footer class="footer">
     <div class="container">
+      <div class="footer__logo">
+        <img src="img/logo-tablet.svg" alt="">
+      </div>
       <div class="footer-social social">
         <a href="#" class="social__link">
           <!-- svg -->
