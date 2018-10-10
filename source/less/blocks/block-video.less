@@ -1,23 +1,26 @@
 .block-video {
   padding: 0 0 30px;
-  border: 1px solid @border-color-light;
-  width: 260px;
   margin: 0 auto 60px;
 }
 
 .block-video__title {
-  height: 95px;
+  margin: 0 auto;
+  padding: 25px 28px 25px 80px;
+  max-width: 210px;
+  background-image: url("../img/icon-video.svg");
+  background-position: 28px center;
+  background-repeat: no-repeat;
   font-size: 17px;
   line-height: 24px;
-  margin: 0;
 }
 
 .block-video__video {
-  margin: 0 0 35px;
+  display: block;
+  margin: 0 auto 35px;
 }
 
 .block-video__container-info {
-  width: 210px;
+  padding: 0 58px;
   margin: 0 auto;
 }
 
@@ -27,4 +30,65 @@
   font-size: 13px;
   line-height: 24px;
   color: @text-color-light;
+}
+// for tablet
+@media (min-width: @min-width-tablet) and (max-width: @max-width-tablet) {
+  .block-video {
+    padding: 55px 0 45px;
+  }
+
+  .block-video__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1050px;
+  }
+
+  .block-video__video {
+    order: -1;
+  }
+
+  .block-video__title {
+    padding: 0 0 0 105px;
+    max-width: none;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+// desktop
+@media (min-width: @min-width-desktop) {
+  .block-video__container {
+    max-width: 1050px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .block-video__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .block-video__title {
+    width: 350px;
+    padding: 100px 130px 40px 60px;
+    margin: 0;
+    background-position: 60px 47px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .block-video__container-info {
+    width: 350px;
+    padding: 0 130px 40px 10px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .block-video__text {
+    font-size: 15px;
+    line-height: 30px;
+  }
 }

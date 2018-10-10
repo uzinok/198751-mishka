@@ -128,3 +128,21 @@
     box-sizing: border-box;
   }
 }
+// desktop
+@media (min-width: @min-width-desktop) {
+  .catalog__block-header {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .catalog__description-list,
+  .catalog__text {
+    width: 292px;
+    padding: 0 0 0 175px;
+  }
+
+  .catalog__container-footer {
+    width: 468px;
+    padding: 0 0 0 175px;
+  }
+}
