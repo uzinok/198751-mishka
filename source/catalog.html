@@ -5,6 +5,31 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
   <title>HTML Academy: catalog</title>
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* Mobile layout by default */
+      background-image: url( "img/Pixel_Glass/mishka-catalog-mobile.jpg" );
+    }
+    /* Tablet */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Tablet layout */
+        background-image: url( "img/Pixel_Glass/mishka-catalog-tablet.jpg" );
+      }
+    }
+    /* Desktop */
+    @media ( min-width: 1250px ) {
+      HTML {
+        /* Desktop layout */
+        background-image: url( "img/Pixel_Glass/mishka-catalog-desktop.jpg" );
+      }
+    }
+    body {
+      opacity: .5;
+    }
+  </style>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -21,15 +46,15 @@
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--tablet">
-              <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
-              <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+              <a href="catalog.html" class="main-nav__link main-nav__link--tablet">Каталог товаров</a>
+              <a href="form.html" class="main-nav__link main-nav__link--tablet">Вязание на заказ</a>
             </li>
             <li class="main-nav__item">
               <a href="#" class="main-nav__link">
-                поиск по сайту
+                Поиск по сайту
               </a>
               <a href="#" class="main-nav__link">
-                корзина: пока пуста
+                Корзина: пока пуста
               </a>
             </li>
             <li class="main-nav__item main-nav__item--desktop">

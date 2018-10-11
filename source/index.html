@@ -5,6 +5,33 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
   <title>HTML Academy: index</title>
+
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* Mobile layout by default */
+      background-image: url( "img/Pixel_Glass/mishka-index-mobile.jpg" );
+    }
+    /* Tablet */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Tablet layout */
+        background-image: url( "img/Pixel_Glass/mishka-index-tablet.jpg" );
+      }
+    }
+    /* Desktop */
+    @media ( min-width: 1250px ) {
+      HTML {
+        /* Desktop layout */
+        background-image: url( "img/Pixel_Glass/mishka-index-desktop.jpg" );
+      }
+    }
+    body {
+      opacity: .7;
+    }
+  </style>
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -12,24 +39,26 @@
   <header class="page-header">
     <div class="page-header__header">
       <div class="container">
+
         <a href="index.html" class="page-header__logo-link">
           <img src="img/logo-mobile.svg" alt="логотип мишка" class="page-header__logo-image">
         </a>
-        <nav class="main-nav">
+
+        <nav class="main-nav main-nav--nojs">
           <button class="main-nav__toggle">
             <span class="visually-hidden">управление меню</span>
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--tablet">
-              <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
-              <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+              <a href="catalog.html" class="main-nav__link main-nav__link--tablet">Каталог товаров</a>
+              <a href="form.html" class="main-nav__link main-nav__link--tablet">Вязание на заказ</a>
             </li>
             <li class="main-nav__item">
               <a href="#" class="main-nav__link">
-                поиск по сайту
+                Поиск по сайту
               </a>
               <a href="#" class="main-nav__link">
-                корзина: пока пуста
+                Корзина: пока пуста
               </a>
             </li>
             <li class="main-nav__item main-nav__item--desktop">
@@ -38,6 +67,7 @@
             </li>
           </ul>
         </nav>
+
       </div>
     </div>
     <div class="page-header__title page-header__title--promo">
@@ -81,7 +111,7 @@
           <p class="block-title__sub-title">Товар недели</p>
         </div>
         <p class="catalog__text">
-          Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+          Экологически чистая пряжа, ручная&nbsp;работа. Доступны в шести расцветках, и трех размерах.
         </p>
         <ul class="catalog__description-list">
           <li class="catalog__description-item">
@@ -108,24 +138,24 @@
     <section class="about">
       <div class="container">
         <h2 class="about__block-title block-title">
-          коротко о нас
+          Коротко о нас
         </h2>
         <ul class="about__list">
           <li class="about__item">
             <div class="about__img"><img src="img/icon-feature-flower.svg" alt="иконка Экологически чистые материалы"></div>
-            <p class="about__text">Экологически чистые материалы</p>
+            <p class="about__text">Экологически чистые&nbsp;материалы</p>
           </li>
           <li class="about__item">
             <div class="about__img"><img src="img/icon-feature-money.svg" alt="иконка Скандинавский стиль по российской цене"></div>
-            <p class="about__text">Скандинавский стиль по российской цене</p>
+            <p class="about__text">Скандинавский стиль по&nbsp;российской цене</p>
           </li>
           <li class="about__item">
             <div class="about__img"><img src="img/icon-feature-heart.svg" alt="иконка Увеличивает лайки на фотографиях"></div>
-            <p class="about__text">Увеличивает лайки на фотографиях</p>
+            <p class="about__text">Увеличивает лайки на&nbsp;фотографиях</p>
           </li>
           <li class="about__item">
             <div class="about__img"><img src="img/icon-feature-ball.svg" alt="иконка Связано вручную с любовью и умилением"></div>
-            <p class="about__text">Связано вручную с любовью и умилением</p>
+            <p class="about__text">Связано вручную с любовью&nbsp;и&nbsp;умилением</p>
           </li>
           <li class="about__item">
             <div class="about__img"><img src="img/icon-feature-rocket.svg" alt="иконка Поддержка отечественного производителя"></div>
@@ -133,7 +163,7 @@
           </li>
           <li class="about__item">
             <div class="about__img"><img src="img/icon-feature-gift.svg" alt="иконка поставляется в подарочной упаковке"></div>
-            <p class="about__text">поставляется в подарочной упаковке</p>
+            <p class="about__text">поставляется в подарочной&nbsp;упаковке</p>
           </li>
         </ul>
       </div>
@@ -157,11 +187,11 @@
 
         </ul>
         <p class="reviews__toggles slider__toggles">
-          <button class="slider__toggle slider__toggle--left">
+          <button class="slider__toggle reviews__toggle reviews__toggle--left slider__toggle--left">
             <img src="img/icon-left-arrow.svg" alt="смена слайдера влево">
             <span class="visually-hidden">смена слайдера влево</span>
           </button>
-          <button class="slider__toggle slider__toggle--right">
+          <button class="slider__toggle reviews__toggle reviews__toggle--left slider__toggle--right">
             <img src="img/icon-right-arrow.svg" alt="смена слайдера вправо">
             <span class="visually-hidden">смена слайдера вправо</span>
           </button>
@@ -243,7 +273,22 @@
     </div>
   </div>
   <!-- MODAL WINDOW -->
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
 
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>

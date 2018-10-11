@@ -4,11 +4,38 @@
   line-height: 30px;
   font-weight: bold;
 }
+
+.block-title__title {
+  margin: 0;
+  padding-bottom: 6px;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.block-title__sub-title {
+  margin: 0;
+  color: @color-teme;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
 // tablet
 @media (min-width: @min-width-tablet) {
   .block-title {
     font-size: 43px;
     line-height: 50px;
+  }
+
+  .block-title__title {
+    font-size: 43px;
+  }
+
+  .block-title__sub-title {
+    width: 125px;
+    padding: 2px 0 0;
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
   }
 }
 // desktop

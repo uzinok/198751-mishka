@@ -5,6 +5,31 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
   <title>HTML Academy: form</title>
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* Mobile layout by default */
+      background-image: url( "img/Pixel_Glass/mishka-form-mobile.jpg" );
+    }
+    /* Tablet */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Tablet layout */
+        background-image: url( "img/Pixel_Glass/mishka-form-tablet.jpg" );
+      }
+    }
+    /* Desktop */
+    @media ( min-width: 1250px ) {
+      HTML {
+        /* Desktop layout */
+        background-image: url( "img/Pixel_Glass/mishka-form-desktop.jpg" );
+      }
+    }
+    body {
+      opacity: .5;
+    }
+  </style>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -104,7 +129,7 @@
           </div>
         </fieldset>
 
-        <fieldset class="order-form__fieldset">
+        <fieldset class="order-form__fieldset order-form__fieldset--contact">
           <div class="order-form__fieldset-container container">
             <label for="" class="order-form__legend">тел</label>
             <p class="order-form__block-input order-form__block-input--tel">
