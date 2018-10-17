@@ -62,8 +62,8 @@
               </a>
             </li>
             <li class="main-nav__item main-nav__item--desktop">
-              <a href="#" class="main-nav__link">Новые поступления</a>
-              <a href="#" class="main-nav__link">Распродажа</a>
+              <a href="#" class="main-nav__link main-nav__link--desktop">Новые поступления</a>
+              <a href="#" class="main-nav__link main-nav__link--desktop">Распродажа</a>
             </li>
           </ul>
         </nav>
@@ -127,7 +127,11 @@
             <span class="catalog__description-data">15 см</span>
           </li>
         </ul>
-        <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки" class="catalog__img-prod">
+        <picture>
+          <source media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.jpg">
+          <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
+          <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки" class="catalog__img-prod">
+        </picture>
         <div class="catalog__container-footer">
           <p class="catalog__price">Цена: 990 руб.</p>
           <button class="button">Заказать</button>
@@ -136,7 +140,7 @@
     </section>
 
     <section class="about">
-      <div class="container">
+      <div class="about__container container">
         <h2 class="about__block-title block-title">
           Коротко о нас
         </h2>
@@ -163,7 +167,7 @@
           </li>
           <li class="about__item">
             <div class="about__img"><img src="img/icon-feature-gift.svg" alt="иконка поставляется в подарочной упаковке"></div>
-            <p class="about__text">поставляется в подарочной&nbsp;упаковке</p>
+            <p class="about__text">Поставляется в подарочной&nbsp;упаковке</p>
           </li>
         </ul>
       </div>
@@ -177,7 +181,7 @@
         <ul class="reviews__list slider__list">
           <li class="reviews__item slider__item">
             <p class="reviews__text">
-              Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также
+              Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также
               набирают
               больше лайков!
             </p>
@@ -201,7 +205,7 @@
     </section>
 
     <section class="contact">
-      <div class="container">
+      <div class="contact__container container">
         <h2 class="contact__block-title block-title">Контакты</h2>
         <address class="contact__address">
           <ul class="contact__list">
@@ -211,13 +215,17 @@
             </li>
             <li class="contact__item">
               <span class="contact__argument">адрес:</span>
-              <span class="contact__data">г. Санкт-Петербург,<br />ул. Большая Конюшенная<br />д.19/8, офис 101</span>
+              <span class="contact__data">г. Санкт-Петербург,<br />ул. Большая Конюшенная<br />д. 19/8, офис 101</span>
             </li>
           </ul>
         </address>
       </div>
       <div class="contact__yandex-map">
-        <img src="img/map-mobile@1x.jpg" alt="наше расположение на карте">
+        <picture>
+          <source media="(min-width: 1250px)" srcset="img/map-desktop@1x.jpg">
+          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg">
+          <img src="img/map-mobile@1x.jpg" alt="наше расположение на карте" class="contact__yandex-map-img">
+        </picture>
       </div>
       <div class="container">
         <button class="contact__button button">Напишите нам</button>
@@ -273,6 +281,7 @@
     </div>
   </div>
   <!-- MODAL WINDOW -->
+
   <script>
     var navMain = document.querySelector('.main-nav');
     var navToggle = document.querySelector('.main-nav__toggle');

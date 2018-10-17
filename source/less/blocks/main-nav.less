@@ -1,3 +1,4 @@
+// for mobile menu
 @media (max-width: @max-width-mobile) {
   .main-nav--nojs {
     .main-nav__toggle {
@@ -142,15 +143,41 @@
 }
 // desktop
 @media (min-width: @min-width-desktop) {
-  .main-nav__list--bottom-tablet {
-    top: 0;
+  .main-nav__item {
+    display: flex;
+
+    &--tablet {
+      top: 0;
+      left: 17px;
+    }
+
+    &--desktop {
+      display: inline-block;
+      position: absolute;
+      left: 18px;
+      top: 88px;
+      z-index: 1;
+    }
   }
 
-  .main-nav__item--desktop {
-    display: inline-block;
-    position: absolute;
-    left: 50px;
-    top: 0;
-    z-index: 1;
+  .main-nav__link {
+    &--tablet {
+      height: 88px;
+      padding: 0 36px 0 33px;
+      margin-right: 0;
+      border-right: 1px solid @border-color-light;
+      font-size: 17px;
+      line-height: 83px;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    &--desktop {
+      padding: 17px 23px 17px 33px;
+      font-size: 15px;
+      line-height: 24px;
+    }
   }
 }

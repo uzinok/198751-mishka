@@ -30,6 +30,7 @@
       opacity: .5;
     }
   </style>
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -37,32 +38,35 @@
   <header class="page-header">
     <div class="page-header__header">
       <div class="container">
+
         <a href="index.html" class="page-header__logo-link">
           <img src="img/logo-mobile.svg" alt="логотип мишка" class="page-header__logo-image">
         </a>
-        <nav class="main-nav">
+
+        <nav class="main-nav main-nav--nojs">
           <button class="main-nav__toggle">
             <span class="visually-hidden">управление меню</span>
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--tablet">
-              <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
-              <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+              <a href="catalog.html" class="main-nav__link main-nav__link--tablet">Каталог товаров</a>
+              <a href="form.html" class="main-nav__link main-nav__link--tablet">Вязание на заказ</a>
             </li>
             <li class="main-nav__item">
               <a href="#" class="main-nav__link">
-                поиск по сайту
+                Поиск по сайту
               </a>
               <a href="#" class="main-nav__link">
-                корзина: пока пуста
+                Корзина: пока пуста
               </a>
             </li>
             <li class="main-nav__item main-nav__item--desktop">
-              <a href="#" class="main-nav__link">Новые поступления</a>
-              <a href="#" class="main-nav__link">Распродажа</a>
+              <a href="#" class="main-nav__link main-nav__link--desktop">Новые поступления</a>
+              <a href="#" class="main-nav__link main-nav__link--desktop">Распродажа</a>
             </li>
           </ul>
         </nav>
+
       </div>
     </div>
     <div class="container">
@@ -76,13 +80,13 @@
   <div class="page-main">
     <div class="block-form">
       <div class="container">
-        <p class="block-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, что бы уточнить детали.</p>
+        <p class="block-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       </div>
       <form action="" class="order-form">
 
-        <fieldset class="order-form__fieldset">
+        <fieldset class="order-form__fieldset order-form__fieldset--type">
           <div class="order-form__fieldset-container container">
-            <legend for="" class="order-form__legend">тип</legend>
+            <legend for="" class="order-form__legend order-form__legend--type">тип</legend>
             <div class="order-form__input-container order-form__input-container--radio">
               <input type="radio" class="order-form__radio" name="radio" id="interior" checked>
               <label class="order-form__label-radio" for="interior">Аксессуар для интерьера</label>
@@ -93,9 +97,12 @@
         </fieldset>
 
         <fieldset class="order-form__fieldset">
+
           <div class="order-form__fieldset-container container">
             <legend for="" class="order-form__legend">цвет</legend>
+
             <div class="order-form__input-container order-form__input-container--checkbox">
+
               <input type="checkbox" class="order-form__checkbox" name="checkbox" id="white" checked>
               <label class="order-form__label-checkbox" for="white">Белый</label>
               <input type="checkbox" class="order-form__checkbox" name="checkbox" checked id="gray">
@@ -108,21 +115,23 @@
               <label class="order-form__label-checkbox" for="pink">Розовый</label>
               <input type="checkbox" class="order-form__checkbox" name="checkbox" id="orange">
               <label class="order-form__label-checkbox" for="orange">Оранжевый</label>
+
             </div>
           </div>
+
         </fieldset>
 
         <fieldset class="order-form__fieldset">
           <div class="order-form__fieldset-container container">
             <legend for="" class="order-form__legend">ФИО</legend>
             <div class="order-form__input-container order-form__input-container--text">
-              <label for="" class="order-form__label">Имя
+              <label for="" class="order-form__label">Имя:
                 <input type="text" class="order-form__input-text" placeholder="Введите ваше имя*" required>
               </label>
-              <label for="" class="order-form__label">фамилия
+              <label for="" class="order-form__label">Фамилия:
                 <input type="text" class="order-form__input-text" placeholder="Укажите фамилию*" required>
               </label>
-              <label for="" class="order-form__label">Отчество
+              <label for="" class="order-form__label">Отчество:
                 <input type="text" class="order-form__input-text" placeholder="Отчество, если желаете">
               </label>
             </div>
@@ -130,18 +139,23 @@
         </fieldset>
 
         <fieldset class="order-form__fieldset order-form__fieldset--contact">
+
           <div class="order-form__fieldset-container container">
-            <label for="" class="order-form__legend">тел</label>
+            <label for="" class="order-form__legend order-form__legend--tel">тел</label>
             <p class="order-form__block-input order-form__block-input--tel">
               <input type="tel" class="order-form__input-tel" placeholder="+7 XXX XXX XX XX*" required>
             </p>
           </div>
+
           <div class="order-form__fieldset-container container">
-            <label for="" class="order-form__legend">e-mail</label>
+
+            <label for="" class="order-form__legend order-form__legend--email">e-mail</label>
             <p class="order-form__block-input order-form__block-input--email">
               <input type="email" class="order-form__input-email" placeholder="Ваш Email*" required>
             </p>
+
           </div>
+
         </fieldset>
 
         <fieldset class="order-form__fieldset">
@@ -185,6 +199,23 @@
       </a>
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>

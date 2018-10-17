@@ -51,8 +51,12 @@
 // for tablet
 @media (min-width: @min-width-tablet) and (max-width: @max-width-tablet) {
   .contact {
-    padding-top: 61px;
+    padding-top: 62px;
     padding-bottom: 58px;
+  }
+
+  .contact__container {
+    padding: 0 47px;
   }
 
   .contact__block-title {
@@ -67,7 +71,8 @@
   }
 
   .contact__item {
-    width: 50%;
+    width: 49%;
+    padding-left: 2px;
     align-items: flex-start;
     font-size: 17px;
     line-height: 30px;
@@ -88,18 +93,37 @@
 // desktop
 @media (min-width: @min-width-desktop) {
   .contact {
-    padding: 150px 0 110px;
+    padding: 142px 0 110px;
     position: relative;
   }
 
   .contact__yandex-map {
+    position: relative;
+    padding: 0 50px;
+    margin: 0 auto;
+    max-width: 1150px;
+  }
+
+  .contact__yandex-map-img {
     position: absolute;
-    top: 70px;
-    right: 100px;
+    top: -405px;
   }
 
   .contact__block-title {
-    padding-left: 175px;
+    padding-left: 168px;
+    font-size: 53px;
+    line-height: 57px;
+    padding-bottom: 47px;
+  }
+
+  .contact__list {
+    width: 310px;
+    padding-bottom: 51px;
+  }
+
+  .contact__item {
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .contact__address {
@@ -107,8 +131,17 @@
     padding-left: 175px;
   }
 
+  .contact__argument {
+    width: 76px;
+  }
+
+  .contact__data--mail {
+    font-size: 17px;
+  }
+
   .contact__button {
     display: inline-block;
     margin-left: 175px;
+    max-width: 230px;
   }
 }
