@@ -11,13 +11,13 @@
 
 .catalog-block__item {
   margin: 0;
-  padding: 30px 0;
+  padding: 30px 0 29px;
   border-bottom: 1px solid @border-color-light;
 }
 
 .catalog-block__img {
   display: block;
-  margin: 0 auto 30px;
+  margin: 0 auto 28px;
 }
 
 .catalog-block__container-info {
@@ -27,14 +27,14 @@
 
 .catalog-block__name {
   margin: 0;
-  padding: 0 0 20px;
+  padding: 0 0 4px;
   font-size: 17px;
   line-height: 24px;
 }
 
 .catalog-block__description {
   margin: 0;
-  padding: 0 0 30px;
+  padding: 0 0 19px;
   font-size: 13px;
   line-height: 30px;
   color: @text-color-light;
@@ -42,28 +42,56 @@
 
 .catalog-block__price {
   margin: 0;
+  padding: 24px 0 0;
+  font-weight: bold;
+  font-size: 15px;
 }
 // tablet
 @media (min-width: @min-width-tablet) and (max-width: @max-width-tablet) {
+  .catalog-block {
+    padding: 57px 0 0;
+  }
+
   .catalog-block__item {
     display: flex;
+    padding: 0 0 52px;
+    border: 1px solid @border-color-light;
   }
 
   .catalog-block__img {
-    margin-bottom: 0;
+    margin: 0;
   }
 
   .catalog-block__container-info {
     display: flex;
     flex-direction: column;
+    width: 50%;
+    padding: 26px 0 0 27px;
+  }
+
+  .catalog-block__name {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .catalog-block__description {
+    font-size: 15px;
+    padding: 0;
   }
 
   .catalog-block__price {
     margin-top: auto;
+    padding: 22px 0 28px 5px;
+    font-size: 17px;
+    line-height: 24px;
   }
 }
 // desktop
 @media (min-width: @min-width-desktop) {
+  .catalog-block {
+    padding-top: 82px;
+  }
+
   .catalog-block__list {
     display: flex;
     justify-content: space-between;
@@ -71,5 +99,41 @@
 
   .catalog-block__item {
     border-bottom: none;
+    padding: 30px 0 0;
+    width: 316px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .catalog-block__container-info {
+    width: 100%;
+    height: 100%;
+    padding: 0 28px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .catalog-block__name {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .catalog-block__description {
+    font-size: 15px;
+    line-height: 30px;
+    padding-bottom: 15px;
+  }
+
+  .catalog-block__price {
+    font-size: 17px;
+    line-height: 24px;
+    margin-top: auto;
+    border-top: 1px solid #ececec;
+    padding: 22px 0 26px;
+  }
+
+  .catalog-block__img {
+    margin: 0 auto 26px;
   }
 }

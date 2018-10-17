@@ -5,6 +5,31 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
   <title>HTML Academy: catalog</title>
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* Mobile layout by default */
+      background-image: url( "img/Pixel_Glass/mishka-catalog-mobile.jpg" );
+    }
+    /* Tablet */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Tablet layout */
+        background-image: url( "img/Pixel_Glass/mishka-catalog-tablet.jpg" );
+      }
+    }
+    /* Desktop */
+    @media ( min-width: 1250px ) {
+      HTML {
+        /* Desktop layout */
+        background-image: url( "img/Pixel_Glass/mishka-catalog-desktop.jpg" );
+      }
+    }
+    body {
+      opacity: .5;
+    }
+  </style>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -12,32 +37,35 @@
   <header class="page-header">
     <div class="page-header__header">
       <div class="container">
+
         <a href="index.html" class="page-header__logo-link">
           <img src="img/logo-mobile.svg" alt="логотип мишка" class="page-header__logo-image">
         </a>
-        <nav class="main-nav">
+
+        <nav class="main-nav main-nav--nojs">
           <button class="main-nav__toggle">
             <span class="visually-hidden">управление меню</span>
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--tablet">
-              <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
-              <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+              <a href="catalog.html" class="main-nav__link main-nav__link--tablet">Каталог товаров</a>
+              <a href="form.html" class="main-nav__link main-nav__link--tablet">Вязание на заказ</a>
             </li>
             <li class="main-nav__item">
               <a href="#" class="main-nav__link">
-                поиск по сайту
+                Поиск по сайту
               </a>
               <a href="#" class="main-nav__link">
-                корзина: пока пуста
+                Корзина: пока пуста
               </a>
             </li>
             <li class="main-nav__item main-nav__item--desktop">
-              <a href="#" class="main-nav__link">Новые поступления</a>
-              <a href="#" class="main-nav__link">Распродажа</a>
+              <a href="#" class="main-nav__link main-nav__link--desktop">Новые поступления</a>
+              <a href="#" class="main-nav__link main-nav__link--desktop">Распродажа</a>
             </li>
           </ul>
         </nav>
+
       </div>
     </div>
     <div class="container">
@@ -54,10 +82,14 @@
       <div class="container">
         <ul class="catalog-block__list">
           <li class="catalog-block__item">
-            <img src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" class="catalog-block__img">
+            <picture>
+              <source media="(min-width: 1250px)" srcset="img/photo-hare-desktop@1x.jpg 1x">
+              <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x">
+              <img src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" class="catalog-block__img">
+            </picture>
             <div class="catalog-block__container-info">
               <h2 class="catalog-block__name">Зайчик-попрыгайчик</h2>
-              <p class="catalog-block__description">Рост 30см, вес 200 г</p>
+              <p class="catalog-block__description">Рост 30 см, вес 200 г</p>
               <p class="catalog-block__price">
                 1 200 руб.
                 <button class="catalog-block__button ">
@@ -69,7 +101,11 @@
           </li>
 
           <li class="catalog-block__item">
-            <img src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" class="catalog-block__img">
+            <picture>
+              <source media="(min-width: 1250px)" srcset="img/photo-bowl-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg">
+              <img src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" class="catalog-block__img">
+            </picture>
             <div class="catalog-block__container-info">
               <h2 class="catalog-block__name">Корзинка для белья</h2>
               <p class="catalog-block__description">Диаметр 15 см, высота 10 см</p>
@@ -84,9 +120,14 @@
           </li>
 
           <li class="catalog-block__item">
-            <img src="img/photo-toys-mobile@1x.jpg" alt="Большая каорзинка для игрушек" class="catalog-block__img">
+
+            <picture>
+              <source media="(min-width: 1250px)" srcset="img/photo-toys-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg">
+              <img src="img/photo-toys-mobile@1x.jpg" alt="Большая каорзинка для игрушек" class="catalog-block__img">
+            </picture>
             <div class="catalog-block__container-info">
-              <h2 class="catalog-block__name">Большая каорзинка для игрушек</h2>
+              <h2 class="catalog-block__name">Большая корзинка для&nbsp;игрушек</h2>
               <p class="catalog-block__description">Диаметр 30 см, высота 30 см</p>
               <p class="catalog-block__price">
                 1 500 руб.
@@ -107,10 +148,14 @@
           <!-- svg -->
           Процесс производства
         </h2>
-        <video poster="img/video-mobile@1x.jpg" alt="Процесс производства" class="block-video__video"></video>
+        <picture class="block-video__video">
+          <source media="(min-width: 1250px)" srcset="img/video-desktop@1x.jpg 1x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x">
+          <img src="img/video-mobile@1x.jpg" alt="Зайчик-попрыгайчик" class="block-video__img">
+        </picture>
         <div class="block-video__container-info">
           <p class="block-video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <button class="button">Сделать заказ</button>
+          <button class="block-video__button button">Сделать заказ</button>
         </div>
       </div>
     </section>
@@ -166,7 +211,22 @@
     </div>
   </div>
   <!-- MODAL WINDOW -->
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
 
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>
