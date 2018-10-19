@@ -4,6 +4,13 @@
   padding: 27px 0 20px;
   height: 102px;
   box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+
+  @media (min-width: @min-width-tablet) {
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
 
   &:nth-of-type(1) {
     background-color: @color-teme;
@@ -20,6 +27,16 @@
       background-color: #46c1ae;
     }
   }
+
+  &:hover .promo-action__container::after {
+    opacity: 0.7;
+  }
+
+  &:active .promo-action__container,
+  &:active .promo-action__text {
+    opacity: 0.3;
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 .promo-action__text {
@@ -28,6 +45,7 @@
   font-size: 19px;
   line-height: 24px;
   font-weight: bold;
+  transition: all 0.5s ease-in-out;
 }
 
 .promo-action__container {
@@ -49,6 +67,7 @@
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.5;
+    transition: all 0.5s ease-in-out;
   }
 
   &--interior::after {

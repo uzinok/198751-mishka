@@ -50,19 +50,31 @@
     border-radius: 50%;
     outline: inherit;
     cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &::after {
+    width: 16px;
+    height: 16px;
+    top: 11px;
+    left: 12px;
   }
 
   &::before {
     border: 2px solid @text-color-light;
   }
+
+  &:hover::before {
+    border-color: #62b1ba;
+  }
 }
 
 .order-form__radio:checked + .order-form__label-radio::after {
-  width: 16px;
-  height: 16px;
-  top: 11px;
-  left: 12px;
   background-color: #63d1bb;
+}
+
+.order-form__radio:checked + .order-form__label-radio:active::after {
+  background-color: @text-color-light;
 }
 
 .order-form__checkbox {
@@ -94,14 +106,23 @@
     outline: inherit;
     cursor: pointer;
     border: 2px solid @text-color-light;
+    transition: all 0.5s ease-in-out;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+  }
+
+  &:hover::before {
+    border-color: #62d1ba;
+  }
+
+  &:active::before {
+    border-color: rgba(68, 68, 68, 0.3);
   }
 }
 
 .order-form__checkbox:checked + .order-form__label-checkbox::before {
   background-image: url("../img/icon-tick.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 25px;
 }
 
 .order-form__label {
@@ -136,6 +157,14 @@
   box-sizing: border-box;
   line-height: 48px;
   font-size: 17px;
+  color: @text-color-light;
+  transition: all 0.5s ease-in-out;
+
+  &:focus,
+  &:hover {
+    border-color: #62d1ba;
+    outline: none;
+  }
 }
 
 .order-form__info {
@@ -154,6 +183,14 @@
   font-size: 18px;
   line-height: 20px;
   font-family: "Open Sans", sans-serif;
+  color: @text-color-light;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+
+  &:focus,
+  &:hover {
+    border-color: #62d1ba;
+  }
 }
 // tablet
 @media (min-width: @min-width-tablet) {
@@ -218,7 +255,7 @@
     left: -3px;
   }
 
-  .order-form__radio:checked + .order-form__label-radio::after {
+  .order-form__radio + .order-form__label-radio::after {
     width: 20px;
     height: 20px;
     top: 13px;
@@ -243,9 +280,6 @@
     height: 48px;
     top: 15px;
     left: -1px;
-  }
-
-  .order-form__checkbox:checked + .order-form__label-checkbox::before {
     background-size: 30px;
   }
 

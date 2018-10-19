@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
   <title>HTML Academy: catalog</title>
-  <!-- <style>
+  <style>
     HTML {
       background-repeat: no-repeat;
       background-position:  50% 0;
@@ -29,7 +29,7 @@
     body {
       opacity: .5;
     }
-  </style> -->
+  </style>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -212,12 +212,12 @@
         <fieldset class="popup__fieldset">
           <legend class="popup__sub-title">выберите размер:</legend>
           <div class="popup__block-checkbox">
-            <input type="checkbox" class="popup__checkbox" name="checkbox" checked>
-            <label class="popup__label-checkbox popup__label-checkbox--checked">s</label>
-            <input type="checkbox" class="popup__checkbox" name="checkbox">
-            <label class="popup__label-checkbox">l</label>
-            <input type="checkbox" class="popup__checkbox" name="checkbox">
-            <label class="popup__label-checkbox">m</label>
+            <input type="checkbox" class="popup__checkbox" name="checkbox" checked id="size_s">
+            <label for="size_s" class="popup__label-checkbox popup__label-checkbox--checked">s</label>
+            <input type="checkbox" class="popup__checkbox" name="checkbox" id="size_l">
+            <label for="size_l" class="popup__label-checkbox">l</label>
+            <input type="checkbox" class="popup__checkbox" name="checkbox" id="size_m">
+            <label for="size_m" class="popup__label-checkbox">m</label>
           </div>
         </fieldset>
         <button class="popup__button button">Добавить</button>
@@ -225,6 +225,7 @@
     </div>
   </div>
   <!-- MODAL WINDOW -->
+
   <script src="js/jquery.min.js" charset="utf-8"></script>
   <script>
     var navMain = document.querySelector('.main-nav');
