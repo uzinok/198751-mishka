@@ -1,12 +1,12 @@
 .block-video {
-  padding: 31px 0 30px;
+  padding: 1px 0 0;
   margin: 0 auto 60px;
 }
 
 .block-video__title {
   margin: 0 auto;
   padding: 24px 28px 25px 90px;
-  max-width: 210px;
+  width: 142px;
   background-image: url("../img/icon-video.svg");
   background-position: 34px 30px;
   background-repeat: no-repeat;
@@ -18,9 +18,31 @@
   display: block;
   margin: 0 auto 21px;
 }
+// for mobie
+@media (max-width: @max-width-mobile) {
+  .block-video__video {
+    width: 260px;
+  }
+}
+
+.block-video__container {
+  border: 1px solid #ececec;
+  padding: 0;
+  margin: 0 29px;
+  box-sizing: border-box;
+  min-width: inherit;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+}
 
 .block-video__container-info {
-  padding: 0 35px;
+  padding: 0 35px 32px;
   margin: 0 auto;
 }
 
@@ -40,7 +62,8 @@
   .block-video__container {
     display: flex;
     flex-direction: column;
-    max-width: 1050px;
+    max-width: 668px;
+    margin: 0 auto;
   }
 
   .block-video__video {
@@ -48,8 +71,12 @@
     margin: 0 auto 34px;
   }
 
+  .block-video__container-info {
+    padding-bottom: 44px;
+  }
+
   .block-video__title {
-    padding: 0 0 0 109px;
+    padding: 0 0 0 107px;
     max-width: none;
     display: block;
     width: 100%;
@@ -61,7 +88,7 @@
   .block-video__text {
     font-size: 15px;
     line-height: 30px;
-    padding: 31px 7px 36px;
+    padding: 31px 5px 36px;
   }
 
   .block-video__button {
@@ -71,13 +98,13 @@
 // desktop
 @media (min-width: @min-width-desktop) {
   .block-video {
-    padding-top: 58px;
-    padding-bottom: 106px;
+    padding: 56px 0 44px;
   }
 
   .block-video__container {
     max-width: 1050px;
-    padding: 0;
+    padding: 0 0 59px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -87,10 +114,12 @@
     position: absolute;
     top: 0;
     left: 0;
+    margin: 0;
   }
 
   .block-video__title {
     width: 350px;
+    box-sizing: border-box;
     padding: 96px 79px 32px 60px;
     margin: 0;
     background-position: 61px 42px;

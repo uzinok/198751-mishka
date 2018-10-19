@@ -50,10 +50,11 @@
   font-size: 17px;
   line-height: 16px;
   color: @text-color-light;
+  cursor: pointer;
+}
 
-  &--checked {
-    border-color: @color-teme;
-  }
+.popup__checkbox:checked + .popup__label-checkbox {
+  border-color: @color-teme;
 }
 
 .popup__button {

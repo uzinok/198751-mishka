@@ -37,12 +37,27 @@
   color: inherit;
   text-decoration: none;
   font-size: 14.5px;
+
+  &:hover {
+    color: #46c1ae;
+    border-color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contact__yandex-map {
   margin: 0;
   padding: 0 0 34px;
   text-align: center;
+}
+// for mobile
+@media (max-width: @max-width-mobile) {
+  .contact__yandex-map-img {
+    width: 320px;
+  }
 }
 
 .contact__button {

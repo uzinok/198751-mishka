@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
   <title>HTML Academy: form</title>
-  <style>
+  <!-- <style>
     HTML {
       background-repeat: no-repeat;
       background-position:  50% 0;
@@ -29,7 +29,7 @@
     body {
       opacity: .5;
     }
-  </style>
+  </style> -->
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -40,10 +40,16 @@
       <div class="container">
 
         <a href="index.html" class="page-header__logo-link">
-          <img src="img/logo-mobile.svg" alt="логотип мишка" class="page-header__logo-image">
+          <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source media="(min-width: 1250px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="логотип мишка" class="page-header__logo-image">
+            <!--[if IE 9]></video><![endif]-->
+          </picture>
         </a>
 
-        <nav class="main-nav main-nav--nojs">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle">
             <span class="visually-hidden">управление меню</span>
           </button>
@@ -200,9 +206,11 @@
     </div>
   </footer>
 
+  <script src="js/jquery.min.js" charset="utf-8"></script>
   <script>
     var navMain = document.querySelector('.main-nav');
     var navToggle = document.querySelector('.main-nav__toggle');
+    var main_nav_list = $('.main-nav__list');
 
     navMain.classList.remove('main-nav--nojs');
 
@@ -210,9 +218,11 @@
       if (navMain.classList.contains('main-nav--closed')) {
         navMain.classList.remove('main-nav--closed');
         navMain.classList.add('main-nav--opened');
+        main_nav_list.fadeIn("slow");
       } else {
         navMain.classList.add('main-nav--closed');
         navMain.classList.remove('main-nav--opened');
+        main_nav_list.fadeOut("slow");
       }
     });
   </script>
