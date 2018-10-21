@@ -40,7 +40,7 @@ gulp.task("server", function() {
 });
 
 gulp.task("sprite", function() {
-  return gulp.src(["source/img/icon-*.svg", "source/img/logo-footer.svg"])
+  return gulp.src(["source/img/for_sprite/*.svg"])
     .pipe(svgstore({
       inlineSvg: true
     }))

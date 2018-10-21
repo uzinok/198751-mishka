@@ -17,6 +17,39 @@
 .block-video__video {
   display: block;
   margin: 0 auto 21px;
+  position: relative;
+}
+
+.block-video__video-play {
+  display: block;
+  width: 101px;
+  height: 76px;
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  box-shadow: none;
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  transition: all .5s ease-in-out;
+  outline: none;
+
+  &:hover {
+    width: 128px;
+    height: 96px;
+  }
+
+  &:active {
+    width: 80px;
+    height: 61px;
+    opacity: .3;
+  }
 }
 // for mobie
 @media (max-width: @max-width-mobile) {

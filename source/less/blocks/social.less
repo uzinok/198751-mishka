@@ -1,0 +1,33 @@
+.social {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.social__link {
+  text-decoration: none;
+  display: block;
+  margin: 0 20px;
+
+  & svg {
+    transition: all 0.5s ease-in-out;
+    fill: #231F20;
+  }
+
+  &:hover svg {
+    fill: @color-teme;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+// tablet
+@media (min-width: @min-width-tablet) {
+  .social {
+    position: relative;
+    left: 37px;
+    border-bottom: none;
+  }
+}

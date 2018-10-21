@@ -16,14 +16,39 @@
 .about__img {
   height: 41px;
   width: 55px;
-  & svg {
-    height: 41px;
-    width: 55px;
+  background-repeat: no-repeat;
+
+  &--ico-flower {
+    background-image: url("../img/icon-feature-flower.svg");
+    background-position: 8px 1px;
+  }
+
+  &--ico-money {
+    background-image: url("../img/icon-feature-money.svg");
+    background-position: 1px 3px;
+  }
+
+  &--ico-heart {
+    background-image: url("../img/icon-feature-heart.svg");
+    background-position: 8px 7px;
+  }
+
+  &--ico-ball {
+    background-image: url("../img/icon-feature-ball.svg");
+    background-position: 5px 5px;
+  }
+
+  &--ico-rocket {
+    background-image: url("../img/icon-feature-rocket.svg");
+    background-position: 0 6px;
+  }
+
+  &--ico-gift {
+    background-image: url("../img/icon-feature-gift.svg");
+    background-position: 3px 4px;
   }
 }
-.about__img use {
-  fill: @color-teme;
-}
+
 .about__text {
   font-size: 17px;
   line-height: 20px;
@@ -76,6 +101,24 @@
 
     &:nth-child(6) {
       order: 6;
+    }
+  }
+
+  .about__img {
+    &--ico-heart {
+      background-position: 8px 10px;
+    }
+
+    &--ico-ball {
+      background-position: 2px 5px;
+    }
+
+    &--ico-rocket {
+      transform: translateX(-9px);
+    }
+
+    &--ico-gift {
+      background-position: 0 6px;
     }
   }
 
