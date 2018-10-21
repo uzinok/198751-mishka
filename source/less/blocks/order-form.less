@@ -50,7 +50,7 @@
     border-radius: 50%;
     outline: inherit;
     cursor: pointer;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
   &::after {
@@ -106,7 +106,7 @@
     outline: inherit;
     cursor: pointer;
     border: 2px solid @text-color-light;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 25px;
@@ -138,7 +138,7 @@
 
   & svg {
     position: absolute;
-    opacity: .2;
+    opacity: 0.2;
     z-index: -1;
   }
 
@@ -161,7 +161,10 @@
   }
 }
 
-.order-form__input-tel:hover + svg, .order-form__input-email:hover + svg, .order-form__input-tel:focus + svg, .order-form__input-email:focus + svg {
+.order-form__input-tel:hover + svg,
+.order-form__input-email:hover + svg,
+.order-form__input-tel:focus + svg,
+.order-form__input-email:focus + svg {
   fill: #62d1ba;
   opacity: 1;
 }
@@ -180,7 +183,7 @@
   line-height: 48px;
   font-size: 17px;
   color: @text-color-light;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 
   &:focus,
   &:hover {
@@ -207,7 +210,7 @@
   font-family: "Open Sans", sans-serif;
   color: @text-color-light;
   outline: none;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 
   &:focus,
   &:hover {
@@ -328,7 +331,7 @@
     padding-left: 18px;
     font-size: 19px;
     line-height: 18px;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
   }
 
   .order-form__input-email,
