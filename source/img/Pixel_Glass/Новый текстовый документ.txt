@@ -1,0 +1,24 @@
+    <style>
+      HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* Mobile layout by default */
+      background-image: url( "img/Pixel_Glass/mishka-catalog-mobile.jpg" );
+    }
+    /* Tablet */
+    @media ( min-width: 760px ) {
+      HTML {
+        /* Tablet layout */
+        background-image: url( "img/Pixel_Glass/mishka-catalog-tablet.jpg" );
+      }
+    }
+    /* Desktop */
+    @media ( min-width: 960px ) {
+      HTML {
+        /* Desktop layout */
+        background-image: url( "img/Pixel_Glass/mishka-catalog-desktop.jpg" );
+      }
+    }
+  </style>
+    <link href="img/Pixel_Glass/styles.css" rel="stylesheet">
+    <script src="img/Pixel_Glass/script.js"></script>

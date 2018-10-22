@@ -14,6 +14,7 @@ var include = require("posthtml-include");
 var imagemin = require('gulp-imagemin');
 var webp = require('gulp-webp');
 var del = require('del');
+var htmlmin = require('gulp-htmlmin');
 
 gulp.task("clean", function() {
   return del("build");
@@ -58,6 +59,7 @@ gulp.task("html", function() {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 });
 
@@ -78,7 +80,7 @@ gulp.task("opti_img", function() {
 gulp.task("webp_convert", function() {
   return gulp.src(["source/img/*.+(png|jpg)"])
     .pipe(webp({
-      quality: 90
+      quality: 95
     }))
     .pipe(gulp.dest("source/img/"));
 });
@@ -93,9 +95,8 @@ gulp.task("server", function() {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/img/for_sprite/*.svg", gulp.series("sprite", "html"));
   gulp.watch("source/*.html", gulp.series("html")).on("change", server.reload);
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "html"));
 gulp.task("start", gulp.series("build", "server"));

@@ -21,7 +21,7 @@
 
   & span,
   & svg {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   &:hover {
@@ -77,11 +77,12 @@
 
 .catalog-block__price {
   margin: 0;
-  padding: 24px 0 0;
+  padding: 23px 0 0;
   font-weight: bold;
   font-size: 15px;
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid @border-color-light;
 }
 // tablet
 @media (min-width: @min-width-tablet) and (max-width: @max-width-tablet) {
@@ -122,8 +123,8 @@
   }
 
   .catalog-block__price {
-    margin-top: auto;
-    padding: 22px 32px 28px 5px;
+    margin: auto 32px 0 4px;
+    padding: 21px 0 27px 0;
     font-size: 17px;
     line-height: 24px;
   }
