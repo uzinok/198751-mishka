@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
   <title>HTML Academy: catalog</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="js/picturefill.js" charset="utf-8"></script>
+  <script src="js/picturefill.js"></script>
 </head>
 
 <body>
@@ -151,18 +151,20 @@
           <!-- svg -->
           Процесс производства
         </h2>
-        <picture class="block-video__video">
-          <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-          <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@1x.jpg 1x, img/video-mobile@2x.jpg 2x" alt="видео: процесс производства" class="block-video__img">
-          <button class="block-video__video-play">
-            <span class="visually-hidden">запустить видео</span>
-          </button>
-        </picture>
+        <button class="block-video__video">
+          <picture class="block-video__video-play">
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@1x.jpg 1x, img/video-mobile@2x.jpg 2x" alt="видео: процесс производства" class="block-video__img">
+          </picture>
+          <span class="block-video__video-btn"><span class="visually-hidden">запустить видео</span></span>
+        </button>
+
         <div class="block-video__container-info">
           <p class="block-video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <button class="block-video__button button">Сделать заказ</button>
@@ -214,12 +216,12 @@
   <div class="popup">
     <div class="popup__container container">
       <h2 class="popup__block-title">Добавить в корзину</h2>
-      <form action="" class="popup__block-form-toggle">
+      <form action="#" method="get" class="popup__block-form-toggle">
         <fieldset class="popup__fieldset">
           <legend class="popup__sub-title">выберите размер:</legend>
           <div class="popup__block-radio">
-            <input type="radio" class="popup__radio" name="radio" checked="" id="size_s">
-            <label for="size_s" class="popup__label-radio popup__label-radio--checked">s</label>
+            <input type="radio" class="popup__radio" name="radio" id="size_s" checked>
+            <label for="size_s" class="popup__label-radio">s</label>
             <input type="radio" class="popup__radio" name="radio" id="size_l">
             <label for="size_l" class="popup__label-radio">l</label>
             <input type="radio" class="popup__radio" name="radio" id="size_m">
@@ -232,39 +234,8 @@
   </div>
   <!-- MODAL WINDOW -->
 
-  <script src="js/jquery.min.js" charset="utf-8"></script>
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-    var main_nav_list = $('.main-nav__list');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-        main_nav_list.fadeIn("slow");
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-        main_nav_list.fadeOut("slow");
-      }
-    });
-
-    var popup = $('.popup');
-
-    $('.button-popup').on("click touchend", function() {
-      popup.fadeIn("slow");
-
-      $(document).mouseup(function(e) {
-        var popup__container = $('.popup__container');
-        if (!popup__container.is(e.target) && popup__container.has(e.target).length === 0) {
-          popup.fadeOut("slow");
-        }
-      });
-    });
-  </script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

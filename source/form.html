@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
   <title>HTML Academy: form</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="js/picturefill.js" charset="utf-8"></script>
+  <script src="js/picturefill.js"></script>
 </head>
 
 <body>
@@ -69,11 +69,11 @@
       <div class="container">
         <p class="block-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       </div>
-      <form action="" class="order-form">
+      <form action="#" method="get" class="order-form">
 
         <fieldset class="order-form__fieldset order-form__fieldset--type">
           <div class="order-form__fieldset-container container">
-            <legend for="" class="order-form__legend order-form__legend--type">тип</legend>
+            <p class="order-form__legend order-form__legend--type">тип</p>
             <div class="order-form__input-container order-form__input-container--radio">
               <input type="radio" class="order-form__radio" name="radio" id="interior" checked="">
               <label class="order-form__label-radio" for="interior">Аксессуар для интерьера</label>
@@ -85,11 +85,11 @@
 
         <fieldset class="order-form__fieldset">
           <div class="order-form__fieldset-container container">
-            <legend for="" class="order-form__legend">цвет</legend>
+            <p class="order-form__legend">цвет</p>
             <div class="order-form__input-container order-form__input-container--checkbox">
-              <input type="checkbox" class="order-form__checkbox" name="checkbox" id="white" checked="">
+              <input type="checkbox" class="order-form__checkbox" name="checkbox" id="white" checked>
               <label class="order-form__label-checkbox" for="white">Белый</label>
-              <input type="checkbox" class="order-form__checkbox" name="checkbox" checked="" id="gray">
+              <input type="checkbox" class="order-form__checkbox" name="checkbox" id="gray" checked>
               <label class="order-form__label-checkbox" for="gray">Серый</label>
               <input type="checkbox" class="order-form__checkbox" name="checkbox" id="turquoise">
               <label class="order-form__label-checkbox" for="turquoise">&laquo;Тиффани&raquo;</label>
@@ -105,16 +105,16 @@
 
         <fieldset class="order-form__fieldset">
           <div class="order-form__fieldset-container container">
-            <legend for="" class="order-form__legend">ФИО</legend>
+            <p class="order-form__legend">ФИО</p>
             <div class="order-form__input-container order-form__input-container--text">
-              <label for="" class="order-form__label">Имя:
-                <input type="text" class="order-form__input-text" placeholder="Введите ваше имя*" required="">
+              <label for="name" class="order-form__label">Имя:
+                <input type="text" class="order-form__input-text" placeholder="Введите ваше имя*" id="name" required>
               </label>
-              <label for="" class="order-form__label">Фамилия:
-                <input type="text" class="order-form__input-text" placeholder="Укажите фамилию*" required="">
+              <label for="first_name" class="order-form__label">Фамилия:
+                <input type="text" class="order-form__input-text" placeholder="Укажите фамилию*" id="first_name" required>
               </label>
-              <label for="" class="order-form__label">Отчество:
-                <input type="text" class="order-form__input-text" placeholder="Отчество, если желаете">
+              <label for="last_name" class="order-form__label">Отчество:
+                <input type="text" class="order-form__input-text" placeholder="Отчество, если желаете" id="last_name">
               </label>
             </div>
           </div>
@@ -122,18 +122,18 @@
 
         <fieldset class="order-form__fieldset order-form__fieldset--contact">
           <div class="order-form__fieldset-container container">
-            <label for="" class="order-form__legend order-form__legend--tel">тел</label>
+            <label for="phone" class="order-form__legend order-form__legend--tel">тел</label>
             <p class="order-form__block-input order-form__block-input--tel">
-              <input type="tel" class="order-form__input-tel" placeholder="+7 XXX XXX XX XX*" required="">
+              <input type="tel" class="order-form__input-tel" placeholder="+7 XXX XXX XX XX*" id="phone" required>
               <svg width="23" height="23">
                 <use xlink:href="#icon-phone"></use>
               </svg>
             </p>
           </div>
           <div class="order-form__fieldset-container container">
-            <label for="" class="order-form__legend order-form__legend--email">e-mail</label>
+            <label for="email" class="order-form__legend order-form__legend--email">e-mail</label>
             <p class="order-form__block-input order-form__block-input--email">
-              <input type="email" class="order-form__input-email" placeholder="Ваш Email*" required="">
+              <input type="email" class="order-form__input-email" placeholder="Ваш Email*" id="email" required>
               <svg width="34" height="32">
                 <use xlink:href="#icon-mail"></use>
               </svg>
@@ -143,8 +143,8 @@
 
         <fieldset class="order-form__fieldset">
           <div class="order-form__fieldset-container container">
-            <legend for="" class="order-form__legend">доп</legend>
-            <textarea name="" id="" cols="30" rows="10" class="order-form__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <label for="text" class="order-form__legend">доп</label>
+            <textarea name="text" id="text" cols="30" rows="10" class="order-form__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
         </fieldset>
 
@@ -195,26 +195,8 @@
     </div>
   </footer>
 
-  <script src="js/jquery.min.js" charset="utf-8"></script>
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-    var main_nav_list = $('.main-nav__list');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-        main_nav_list.fadeIn("slow");
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-        main_nav_list.fadeOut("slow");
-      }
-    });
-  </script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
