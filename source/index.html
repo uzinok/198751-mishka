@@ -13,7 +13,7 @@
 <body>
 
   <div style="display: none;">
-    <include src="source/img/for_sprite/sprite.svg"></include>
+    <include src="build/img/sprite.svg"></include>
   </div>
 
   <header class="page-header">
@@ -115,7 +115,7 @@
         </picture>
         <div class="catalog__container-footer">
           <p class="catalog__price">Цена: 990 руб.</p>
-          <button class="button">Заказать</button>
+          <button class="button button-popup">Заказать</button>
         </div>
       </div>
     </section>
@@ -218,11 +218,13 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer__logo">
-        <svg width="102" height="150" role="img">
-          <use xlink:href="#logo-footer"></use>
-        </svg>
-      </div>
+      <a href="index.html">
+        <div class="footer__logo">
+          <svg width="102" height="150" role="img">
+            <use xlink:href="#logo-footer"></use>
+          </svg>
+        </div>
+      </a>
       <div class="footer-social social">
         <a href="#" class="social__link">
           <svg width="22" height="100%">
@@ -254,18 +256,18 @@
 
   <!-- MODAL WINDOW -->
   <div class="popup">
-    <div class="container">
+    <div class="popup__container container">
       <h2 class="popup__block-title">Добавить в корзину</h2>
       <form action="" class="popup__block-form-toggle">
         <fieldset class="popup__fieldset">
           <legend class="popup__sub-title">выберите размер:</legend>
-          <div class="popup__block-checkbox">
-            <input type="checkbox" class="popup__checkbox" name="checkbox" checked="" id="size_s">
-            <label for="size_s" class="popup__label-checkbox popup__label-checkbox--checked">s</label>
-            <input type="checkbox" class="popup__checkbox" name="checkbox" id="size_l">
-            <label for="size_l" class="popup__label-checkbox">l</label>
-            <input type="checkbox" class="popup__checkbox" name="checkbox" id="size_m">
-            <label for="size_m" class="popup__label-checkbox">m</label>
+          <div class="popup__block-radio">
+            <input type="radio" class="popup__radio" name="radio" checked="" id="size_s">
+            <label for="size_s" class="popup__label-radio popup__label-radio--checked">s</label>
+            <input type="radio" class="popup__radio" name="radio" id="size_l">
+            <label for="size_l" class="popup__label-radio">l</label>
+            <input type="radio" class="popup__radio" name="radio" id="size_m">
+            <label for="size_m" class="popup__label-radio">m</label>
           </div>
         </fieldset>
         <button class="popup__button button">Добавить</button>
@@ -292,6 +294,18 @@
         navMain.classList.remove('main-nav--opened');
         main_nav_list.fadeOut("slow");
       }
+    });
+    var popup = $('.popup');
+
+    $('.button-popup').on("click touchend", function() {
+      popup.fadeIn("slow");
+
+      $(document).mouseup(function(e) {
+        var popup__container = $('.popup__container');
+        if (!popup__container.is(e.target) && popup__container.has(e.target).length === 0) {
+          popup.fadeOut("slow");
+        }
+      });
     });
   </script>
 </body>
