@@ -46,11 +46,23 @@ gulp.task("css", function() {
 });
 
 gulp.task("sprite", function() {
+  // del("source/img/for_sprite/sprite.svg");
   return gulp.src(["source/img/for_sprite/*.svg"])
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
+    .pipe(imagemin([
+      imagemin.svgo({
+        plugins: [{
+            removeViewBox: true
+          },
+          {
+            cleanupIDs: false
+          }
+        ]
+      })
+    ]))
     .pipe(gulp.dest("source/img/for_sprite/"));
 });
 
@@ -59,19 +71,32 @@ gulp.task("html", function() {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest("build"));
 });
 
 gulp.task("opti_img", function() {
   return gulp.src(["source/img/*.+(svg|png|jpg)"])
     .pipe(imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.optipng({optimizationLevel: 5}),
-      imagemin.svgo({plugins: [{
-            removeViewBox: true},
-          {cleanupIDs: false}]
+      imagemin.gifsicle({
+        interlaced: true
+      }),
+      imagemin.jpegtran({
+        progressive: true
+      }),
+      imagemin.optipng({
+        optimizationLevel: 5
+      }),
+      imagemin.svgo({
+        plugins: [{
+            removeViewBox: true
+          },
+          {
+            cleanupIDs: false
+          }
+        ]
       })
     ]))
     .pipe(gulp.dest("source/img/"));
