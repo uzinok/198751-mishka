@@ -14,6 +14,13 @@
     }
   }
 
+  .main-nav__item {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
   .main-nav--opened {
     .main-nav__toggle {
       background-image: url("../img/icon-menu-close.svg");
@@ -123,7 +130,7 @@
 @media (max-width: @max-width-mobile) {
   .main-nav__link {
     position: relative;
-    width: 260px;
+    flex-grow: 1;
     box-sizing: border-box;
     padding-left: 45px;
     text-align: left;
