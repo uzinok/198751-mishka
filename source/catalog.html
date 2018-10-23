@@ -83,7 +83,7 @@
               <p class="catalog-block__description">Рост 30 см, вес 200 г</p>
               <p class="catalog-block__price">
                 <span>1 200 руб.</span>
-                <button class="catalog-block__button ">
+                <button class="catalog-block__button button-popup">
                   <span class="visually-hidden">заказ товара</span>
                   <svg width="20" height="20">
                     <use xlink:href="#icon-cart"></use>
@@ -108,7 +108,7 @@
               <p class="catalog-block__description">Диаметр 15 см, высота 10 см</p>
               <p class="catalog-block__price">
                 <span>690 руб.</span>
-                <button class="catalog-block__button ">
+                <button class="catalog-block__button button-popup">
                   <span class="visually-hidden">заказ товара</span>
                   <svg width="20" height="20">
                     <use xlink:href="#icon-cart"></use>
@@ -132,7 +132,7 @@
               <p class="catalog-block__description">Диаметр 30 см, высота 30 см</p>
               <p class="catalog-block__price">
                 <span>1 500 руб.</span>
-                <button class="catalog-block__button ">
+                <button class="catalog-block__button button-popup">
                   <span class="visually-hidden">заказ товара</span>
                   <svg width="20" height="20">
                     <use xlink:href="#icon-cart"></use>
@@ -212,18 +212,18 @@
 
   <!-- MODAL WINDOW -->
   <div class="popup">
-    <div class="container">
+    <div class="popup__container container">
       <h2 class="popup__block-title">Добавить в корзину</h2>
       <form action="" class="popup__block-form-toggle">
         <fieldset class="popup__fieldset">
           <legend class="popup__sub-title">выберите размер:</legend>
-          <div class="popup__block-checkbox">
-            <input type="checkbox" class="popup__checkbox" name="checkbox" checked="" id="size_s">
-            <label for="size_s" class="popup__label-checkbox popup__label-checkbox--checked">s</label>
-            <input type="checkbox" class="popup__checkbox" name="checkbox" id="size_l">
-            <label for="size_l" class="popup__label-checkbox">l</label>
-            <input type="checkbox" class="popup__checkbox" name="checkbox" id="size_m">
-            <label for="size_m" class="popup__label-checkbox">m</label>
+          <div class="popup__block-radio">
+            <input type="radio" class="popup__radio" name="radio" checked="" id="size_s">
+            <label for="size_s" class="popup__label-radio popup__label-radio--checked">s</label>
+            <input type="radio" class="popup__radio" name="radio" id="size_l">
+            <label for="size_l" class="popup__label-radio">l</label>
+            <input type="radio" class="popup__radio" name="radio" id="size_m">
+            <label for="size_m" class="popup__label-radio">m</label>
           </div>
         </fieldset>
         <button class="popup__button button">Добавить</button>
@@ -250,6 +250,19 @@
         navMain.classList.remove('main-nav--opened');
         main_nav_list.fadeOut("slow");
       }
+    });
+
+    var popup = $('.popup');
+
+    $('.button-popup').on("click touchend", function() {
+      popup.fadeIn("slow");
+
+      $(document).mouseup(function(e) {
+        var popup__container = $('.popup__container');
+        if (!popup__container.is(e.target) && popup__container.has(e.target).length === 0) {
+          popup.fadeOut("slow");
+        }
+      });
     });
   </script>
 </body>

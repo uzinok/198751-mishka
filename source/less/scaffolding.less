@@ -22,6 +22,20 @@ body {
   padding: 0 30px;
   box-sizing: border-box;
 }
+
+input::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+  color: rgba(255, 0, 0, 0);
+}
+
+input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+  color: rgba(255, 0, 0, 0);
+}
 // tablet
 @media (min-width: @min-width-tablet) {
   .container {
