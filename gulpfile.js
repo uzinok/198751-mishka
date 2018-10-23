@@ -46,12 +46,7 @@ gulp.task("css", function() {
 });
 
 gulp.task("sprite", function() {
-  // del("source/img/for_sprite/sprite.svg");
   return gulp.src(["source/img/for_sprite/*.svg"])
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
     .pipe(imagemin([
       imagemin.svgo({
         plugins: [{
@@ -59,11 +54,15 @@ gulp.task("sprite", function() {
           },
           {
             cleanupIDs: false
+          },
+          {
+            inlineSvg: true
           }
         ]
       })
     ]))
-    .pipe(gulp.dest("source/img/for_sprite/"));
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("source/img/"));
 });
 
 gulp.task("html", function() {
