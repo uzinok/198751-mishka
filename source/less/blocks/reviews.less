@@ -57,12 +57,15 @@
 
 .reviews__toggle {
   background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
   border: none;
   box-shadow: none;
   display: block;
   height: 52px;
   width: 50%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.6;
@@ -70,6 +73,14 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &--left {
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+
+  &--right {
+    background-image: url("../img/icon-right-arrow.svg");
   }
 }
 // for mobile
@@ -127,6 +138,7 @@
     top: 110px;
     right: 51px;
     width: 175px;
+    z-index: 9;
   }
 
   .reviews__toggles {

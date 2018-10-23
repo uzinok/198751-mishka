@@ -1,11 +1,12 @@
 .contact {
   padding-top: 34px;
-  padding-bottom: 40px;
+  padding-bottom: 39px;
 }
 
 .contact__block-title {
   margin: 0;
   padding: 0 0 26px;
+  position: relative;
   font-size: 18px;
 }
 
@@ -49,14 +50,26 @@
 }
 
 .contact__yandex-map {
-  margin: 0;
-  padding: 0 0 34px;
-  text-align: center;
-}
-// for mobile
-@media (max-width: @max-width-mobile) {
-  .contact__yandex-map-img {
-    width: 320px;
+  margin: 0 auto;
+  padding: 0 0 33px;
+  width: 320px;
+  position: relative;
+  // for mobile
+  @media (max-width: @max-width-mobile) {
+    overflow: hidden;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 66px;
+    height: 100px;
+    top: 145px;
+    left: 139px;
+    background-image: url("../img/icon-map-pin.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -67,7 +80,7 @@
 @media (min-width: @min-width-tablet) and (max-width: @max-width-tablet) {
   .contact {
     padding-top: 62px;
-    padding-bottom: 58px;
+    padding-bottom: 57px;
   }
 
   .contact__container {
@@ -77,6 +90,19 @@
   .contact__block-title {
     font-size: 43px;
     padding-bottom: 48px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 80px;
+      position: absolute;
+      top: -14px;
+      right: 5px;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   .contact__list {
@@ -98,7 +124,13 @@
   }
 
   .contact__yandex-map {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
+    width: 768px;
+
+    &::after {
+      top: 140px;
+      left: 364px;
+    }
   }
 
   .contact__button {
@@ -108,7 +140,7 @@
 // desktop
 @media (min-width: @min-width-desktop) {
   .contact {
-    padding: 142px 0 110px;
+    padding: 142px 0 105px;
     position: relative;
   }
 
@@ -116,12 +148,18 @@
     position: relative;
     padding: 0 50px;
     margin: 0 auto;
-    max-width: 1150px;
+    width: 525px;
+
+    &::after {
+      top: -259px;
+      left: 550px;
+    }
   }
 
   .contact__yandex-map-img {
     position: absolute;
     top: -405px;
+    right: -212px;
   }
 
   .contact__block-title {
@@ -129,6 +167,19 @@
     font-size: 53px;
     line-height: 57px;
     padding-bottom: 47px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 80px;
+      position: absolute;
+      top: -8px;
+      left: 61px;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   .contact__list {

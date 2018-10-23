@@ -3,52 +3,28 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
   <title>HTML Academy: form</title>
-  <!-- <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position:  50% 0;
-      /* Mobile layout by default */
-      background-image: url( "img/Pixel_Glass/mishka-form-mobile.jpg" );
-    }
-    /* Tablet */
-    @media ( min-width: 768px ) {
-      HTML {
-        /* Tablet layout */
-        background-image: url( "img/Pixel_Glass/mishka-form-tablet.jpg" );
-      }
-    }
-    /* Desktop */
-    @media ( min-width: 1250px ) {
-      HTML {
-        /* Desktop layout */
-        background-image: url( "img/Pixel_Glass/mishka-form-desktop.jpg" );
-      }
-    }
-    body {
-      opacity: .5;
-    }
-  </style> -->
-
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="js/picturefill.js" charset="utf-8"></script>
 </head>
 
 <body>
+
+  <div style="display: none;">
+    <include src="source/img/for_sprite/sprite.svg"></include>
+  </div>
+
   <header class="page-header">
     <div class="page-header__header">
       <div class="container">
-
         <a href="index.html" class="page-header__logo-link">
           <picture>
-            <!--[if IE 9]><video style="display: none;"><![endif]-->
             <source media="(min-width: 1250px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img src="img/logo-mobile.svg" alt="логотип мишка" class="page-header__logo-image">
-            <!--[if IE 9]></video><![endif]-->
           </picture>
         </a>
-
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle">
             <span class="visually-hidden">управление меню</span>
@@ -59,10 +35,16 @@
               <a href="form.html" class="main-nav__link main-nav__link--tablet">Вязание на заказ</a>
             </li>
             <li class="main-nav__item">
-              <a href="#" class="main-nav__link">
-                Поиск по сайту
+              <a href="#" class="main-nav__link main-nav__link--left">
+                <svg width="20" height="20" class="main-nav__ico">
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+                <span class="visualy_mobile">Поиск по сайту</span>
               </a>
-              <a href="#" class="main-nav__link">
+              <a href="#" class="main-nav__link main-nav__link--left">
+                <svg width="20" height="20" class="main-nav__ico">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
                 Корзина: пока пуста
               </a>
             </li>
@@ -72,7 +54,6 @@
             </li>
           </ul>
         </nav>
-
       </div>
     </div>
     <div class="container">
@@ -94,24 +75,21 @@
           <div class="order-form__fieldset-container container">
             <legend for="" class="order-form__legend order-form__legend--type">тип</legend>
             <div class="order-form__input-container order-form__input-container--radio">
-              <input type="radio" class="order-form__radio" name="radio" id="interior" checked>
+              <input type="radio" class="order-form__radio" name="radio" id="interior" checked="">
               <label class="order-form__label-radio" for="interior">Аксессуар для интерьера</label>
-              <input type="radio" class="order-form__radio" name="radio" id="toy" checked>
+              <input type="radio" class="order-form__radio" name="radio" id="toy" checked="">
               <label class="order-form__label-radio" for="toy">Детская игрушка</label>
             </div>
           </div>
         </fieldset>
 
         <fieldset class="order-form__fieldset">
-
           <div class="order-form__fieldset-container container">
             <legend for="" class="order-form__legend">цвет</legend>
-
             <div class="order-form__input-container order-form__input-container--checkbox">
-
-              <input type="checkbox" class="order-form__checkbox" name="checkbox" id="white" checked>
+              <input type="checkbox" class="order-form__checkbox" name="checkbox" id="white" checked="">
               <label class="order-form__label-checkbox" for="white">Белый</label>
-              <input type="checkbox" class="order-form__checkbox" name="checkbox" checked id="gray">
+              <input type="checkbox" class="order-form__checkbox" name="checkbox" checked="" id="gray">
               <label class="order-form__label-checkbox" for="gray">Серый</label>
               <input type="checkbox" class="order-form__checkbox" name="checkbox" id="turquoise">
               <label class="order-form__label-checkbox" for="turquoise">&laquo;Тиффани&raquo;</label>
@@ -121,10 +99,8 @@
               <label class="order-form__label-checkbox" for="pink">Розовый</label>
               <input type="checkbox" class="order-form__checkbox" name="checkbox" id="orange">
               <label class="order-form__label-checkbox" for="orange">Оранжевый</label>
-
             </div>
           </div>
-
         </fieldset>
 
         <fieldset class="order-form__fieldset">
@@ -132,10 +108,10 @@
             <legend for="" class="order-form__legend">ФИО</legend>
             <div class="order-form__input-container order-form__input-container--text">
               <label for="" class="order-form__label">Имя:
-                <input type="text" class="order-form__input-text" placeholder="Введите ваше имя*" required>
+                <input type="text" class="order-form__input-text" placeholder="Введите ваше имя*" required="">
               </label>
               <label for="" class="order-form__label">Фамилия:
-                <input type="text" class="order-form__input-text" placeholder="Укажите фамилию*" required>
+                <input type="text" class="order-form__input-text" placeholder="Укажите фамилию*" required="">
               </label>
               <label for="" class="order-form__label">Отчество:
                 <input type="text" class="order-form__input-text" placeholder="Отчество, если желаете">
@@ -145,23 +121,24 @@
         </fieldset>
 
         <fieldset class="order-form__fieldset order-form__fieldset--contact">
-
           <div class="order-form__fieldset-container container">
             <label for="" class="order-form__legend order-form__legend--tel">тел</label>
             <p class="order-form__block-input order-form__block-input--tel">
-              <input type="tel" class="order-form__input-tel" placeholder="+7 XXX XXX XX XX*" required>
+              <input type="tel" class="order-form__input-tel" placeholder="+7 XXX XXX XX XX*" required="">
+              <svg width="23" height="23">
+                <use xlink:href="#icon-phone"></use>
+              </svg>
             </p>
           </div>
-
           <div class="order-form__fieldset-container container">
-
             <label for="" class="order-form__legend order-form__legend--email">e-mail</label>
             <p class="order-form__block-input order-form__block-input--email">
-              <input type="email" class="order-form__input-email" placeholder="Ваш Email*" required>
+              <input type="email" class="order-form__input-email" placeholder="Ваш Email*" required="">
+              <svg width="34" height="32">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
             </p>
-
           </div>
-
         </fieldset>
 
         <fieldset class="order-form__fieldset">
@@ -183,25 +160,35 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__logo">
-        <img src="img/logo-tablet.svg" alt="">
+        <svg width="102" height="150" role="img">
+          <use xlink:href="#logo-footer"></use>
+        </svg>
       </div>
       <div class="footer-social social">
         <a href="#" class="social__link">
-          <!-- svg -->
+          <svg width="22" height="100%">
+            <use xlink:href="#icon-insta"></use>
+          </svg>
           <span class="visually-hidden">социальная ссылка</span>
         </a>
         <a href="#" class="social__link">
-          <!-- svg -->
+          <svg width="16" height="100%">
+            <use xlink:href="#icon-fb"></use>
+          </svg>
           <span class="visually-hidden">социальная ссылка</span>
         </a>
         <a href="#" class="social__link">
-          <!-- svg -->
+          <svg width="20" height="100%">
+            <use xlink:href="#icon-twitter"></use>
+          </svg>
           <span class="visually-hidden">социальная ссылка</span>
         </a>
       </div>
       <a href="#" class="footer-developer-link">
         Разработано
-        <img src="img/logo-htmlacademy.svg" alt="логотип htmlacademy" class="footer-developer-link__img">
+        <svg width="27" height="34" class="footer-developer-link__img" role="img">
+          <use xlink:href="#logo-htmlacademy"></use>
+        </svg>
       </a>
     </div>
   </footer>
