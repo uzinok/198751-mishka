@@ -15,6 +15,7 @@ var imagemin = require('gulp-imagemin');
 var webp = require('gulp-webp');
 var del = require('del');
 var htmlmin = require('gulp-htmlmin');
+var uglify = require('gulp-uglify');
 
 gulp.task("clean", function() {
   return del("build");
@@ -29,6 +30,12 @@ gulp.task("copy", function() {
       base: "source"
     })
     .pipe(gulp.dest("build"));
+});
+
+gulp.task('js', function() {
+  return gulp.src('source/js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js'));
 });
 
 gulp.task("css", function() {
@@ -122,5 +129,5 @@ gulp.task("server", function() {
   gulp.watch("source/*.html", gulp.series("html")).on("change", server.reload);
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "js", "html"));
 gulp.task("start", gulp.series("build", "server"));
