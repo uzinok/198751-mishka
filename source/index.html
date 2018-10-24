@@ -6,6 +6,10 @@
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
   <title>HTML Academy: index</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans.woff2" as="script">
+  <link rel="preload" href="fonts/opensans.woff" as="script">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="script">
+  <link rel="preload" href="fonts/opensansbold.woff" as="script">
   <script src="js/picturefill.js"></script>
 </head>
 
@@ -220,7 +224,7 @@
     <div class="container">
       <a href="index.html">
         <div class="footer__logo">
-          <svg width="102" height="150" role="img">
+          <svg width="102" height="136" role="img">
             <use xlink:href="#logo-footer"></use>
           </svg>
         </div>
@@ -257,17 +261,17 @@
   <!-- MODAL WINDOW -->
   <div class="popup">
     <div class="popup__container container">
-      <h2 class="popup__block-title">Добавить в корзину</h2>
+      <h2 class="popup__block-title">Добавить в&nbsp;корзину</h2>
       <form action="#" method="get" class="popup__block-form-toggle">
         <fieldset class="popup__fieldset">
-          <legend class="popup__sub-title">выберите размер:</legend>
+          <legend class="popup__sub-title">Выберите размер:</legend>
           <div class="popup__block-radio">
             <input type="radio" class="popup__radio" name="radio" id="size_s" checked>
             <label for="size_s" class="popup__label-radio">s</label>
-            <input type="radio" class="popup__radio" name="radio" id="size_l">
-            <label for="size_l" class="popup__label-radio">l</label>
             <input type="radio" class="popup__radio" name="radio" id="size_m">
             <label for="size_m" class="popup__label-radio">m</label>
+            <input type="radio" class="popup__radio" name="radio" id="size_l">
+            <label for="size_l" class="popup__label-radio">l</label>
           </div>
         </fieldset>
         <button class="popup__button button">Добавить</button>

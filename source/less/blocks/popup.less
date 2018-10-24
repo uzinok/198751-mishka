@@ -25,6 +25,15 @@
   font-size: 25px;
   line-height: 30px;
   margin: 40px 0 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.popup__sub-title {
+  margin-bottom: 25px;
+  font-size: 15px;
+  line-height: 30px;
+  color: @text-color-light;
 }
 
 .popup__block-form-toggle {
@@ -37,12 +46,6 @@
   padding: 0;
 }
 
-.popup__sub-title {
-  font-size: 15px;
-  margin-bottom: 25px;
-  line-height: 30px;
-  color: @text-color-light;
-}
 
 .popup__block-radio {
   display: flex;
@@ -67,6 +70,8 @@
   font-size: 17px;
   line-height: 16px;
   color: @text-color-light;
+  font-weight: bold;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -78,7 +83,12 @@
   margin-top: 30px;
   background-color: @color-teme;
   border-color: @color-teme;
+  max-width: 350px;
   color: #ffffff;
+
+  &:hover {
+    border-color: @text-color-light;
+  }
 }
 // tablet
 @media (min-width: @min-width-tablet) {
@@ -94,7 +104,6 @@
     font-size: 30px;
     line-height: 57px;
     margin: 0;
-    padding: 0 10px;
   }
 
   .popup__fieldset {
